@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['user_email'] = $user['email'];
             $_SESSION['user_role'] = $user['id_rol']; 
             if ($user['id_rol'] == 1) {
-                header("Location: /panel/dashboard.php");
+                header("Location: /panel/index.php");
             } elseif ($user['id_rol'] == 2) {
                 header("Location: ../profile.html");
             } else {

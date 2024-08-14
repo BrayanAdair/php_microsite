@@ -24246,11 +24246,13 @@ dl li {
   margin-right: auto;
   margin-left: 1rem;
 }
-.sidebar .nav .nav-item.active > .nav-link {
+/* active sidebar aqui se cambia el color */
+.sidebar .nav .nav-item.hover > .nav-link {
   background: #0f1015;
   position: relative;
 }
-.sidebar .nav .nav-item.active > .nav-link:before {
+/* active en vez de hover para la linea azul del scroll */
+.sidebar .nav .nav-item.hover > .nav-link:before {
   content: "";
   width: 3px;
   height: 100%;
