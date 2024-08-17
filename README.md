@@ -6,4 +6,4 @@
  se subira al host tal cual como lo ves solo generas el dist de la version final y copiamos el microsite
  dentro del dist.
 
- uso form action method post para conectar con los controladores de php
+ uso form action method post para conectar con los controladores de php ok
