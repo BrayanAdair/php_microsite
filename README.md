@@ -7,3 +7,6 @@
  dentro del dist.
 
  uso form action method post para conectar con los controladores de php
+
+
+sudo apt-get remove docker-compose && sudo apt-get autoremove
