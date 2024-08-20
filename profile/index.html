@@ -1,41 +1,6 @@
 <!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.13.3"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><title>home page</title><meta name="description" content="Astro description"><link rel="stylesheet" href="/_astro/article.B222qwIW.css">
 <style>.sliderDragable[data-astro-cid-7s3qzkcw],[data-astro-cid-7s3qzkcw],[data-astro-cid-7s3qzkcw]:before,[data-astro-cid-7s3qzkcw]:after,[data-astro-cid-7s3qzkcw]::-webkit-scrollbar{-ms-overflow-style:none;scrollbar-width:none}.sliderDragable[data-astro-cid-7s3qzkcw]::-webkit-scrollbar{display:none}
-</style><script type="module" src="/_astro/hoisted.h00yiMmG.js"></script></head> <body class="bg-gray-800 text-white font-urb"> <nav class="container z-20 relative mt-[29px] md:mt-[43px] flex justify-between px-[5%] md:gap-[87px] items-center"> <a class="md:mr-auto flex-shrink-0" href="/"> <img class="w-auto h-[1.9rem] md:h-[3.5rem]" src="/_astro/logo.Cg2ExKvT.png" alt=""></a> <div class="flex gap-8 "> <a href="/pricing" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Planes</p></a> <a href="/auth" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Iniciar sesion</p></a> <custom-lang class="relative place-content-center"> <button class="w-max p-2 hover:bg-gray-100 rounded-full"><img class="w-[20px]" src="/_astro/es.H8iErWca.png" alt=""></button> </custom-lang> <script>(function(){const srcPaths = {"es":"/_astro/es.H8iErWca.png","en":"/_astro/en.DKenLY1t.png","it":"/_astro/it.DlZE-5Xj.png"};
-
-
-    const paths = srcPaths
-    const langs = ["es", "en", "it"];
-    let userlang = localStorage.getItem("userlang")
-
-    if (!userlang) {
-        userlang = document.documentElement.lang || navigator.language.split("-")[-1];
-        if (!userlang in langs){
-            userlang = "en"
-        }
-        localStorage.setItem("userlang", userlang)
-    }
-    let actual = langs.indexOf(userlang)
-    
-    class Lang extends HTMLElement {
-        constructor() {
-            super();
-
-            // img selection img
-            const img = this.querySelector("img");
-            img.src = paths[langs[actual]];
-
-            // interactive btn
-            const btn = this.querySelector("button");
-            btn.addEventListener("click", () => {
-                actual = (actual + 1) % 3
-                localStorage.setItem("userlang", langs[actual])
-                img.src = paths[langs[actual]];
-            });
-        }
-    }
-
-    customElements.define("custom-lang", Lang);
-})();</script> </div> </nav>  <section class="container px-[10%] my-16"> <div class="flex w-full justify-center gap-4 items-center my-8"> <span class="text-nowrap 
+</style><script type="module" src="/_astro/hoisted.CYhoni-R.js"></script></head> <body class="bg-gray-800 text-white font-urb"> <nav class="container z-20 relative mt-[29px] md:mt-[43px] flex justify-between px-[5%] md:gap-[87px] items-center"> <a class="md:mr-auto flex-shrink-0" href="/"> <img class="w-auto h-[1.9rem] md:h-[3.5rem]" src="/_astro/logo.Cg2ExKvT.png" alt=""></a> <div class="flex gap-8 "> <a href="/pricing" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Planes</p></a> <a href="/auth" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Iniciar sesion</p></a> <custom-lang class="relative place-content-center"> <button class="w-max p-2 hover:bg-gray-100 rounded-full"><img class="w-[20px]" src="" alt=""></button> </custom-lang>  </div> </nav>  <section class="container px-[10%] my-16"> <div class="flex w-full justify-center gap-4 items-center my-8"> <span class="text-nowrap 
 text-xs md:text-base lg:text-3xl
 ">Plan Intermedio</span> <a href="/payment" class="curosor-pointer bg-gray-400 px-4 py-1 rounded-3xl  text-gray-100
 			flex gap-4 items-center 
@@ -78,19 +43,19 @@ consectetur adipiscing elit. Etiam eu turpis
                 text-xs py-1 px-3 rounded-3xl
                 sm:text-lg sm:py-2 sm:px-6 lg:rounded-[4rem]
                 xl:text-3xl xl:py-4 xl:px-10
-                "> <span class="text-nowrap">Fase 1</span> <input class="invisible h-0 w-0" type="radio" name="group1"> </label><label class="  flex items-center justify-center  bg-gray-600 hover:bg-gray-300 cursor-pointer 
+                "> <span class="text-nowrap">Fase 1</span> <input maxlength="25" class="invisible h-0 w-0" type="radio" name="group1"> </label><label class="  flex items-center justify-center  bg-gray-600 hover:bg-gray-300 cursor-pointer 
                 
                 font-bold  
                 text-xs py-1 px-3 rounded-3xl
                 sm:text-lg sm:py-2 sm:px-6 lg:rounded-[4rem]
                 xl:text-3xl xl:py-4 xl:px-10
-                "> <span class="text-nowrap">Fase 1</span> <input class="invisible h-0 w-0" type="radio" name="group1"> </label><label class="  flex items-center justify-center  bg-gray-600 hover:bg-gray-300 cursor-pointer 
+                "> <span class="text-nowrap">Fase 1</span> <input maxlength="25" class="invisible h-0 w-0" type="radio" name="group1"> </label><label class="  flex items-center justify-center  bg-gray-600 hover:bg-gray-300 cursor-pointer 
                 
                 font-bold  
                 text-xs py-1 px-3 rounded-3xl
                 sm:text-lg sm:py-2 sm:px-6 lg:rounded-[4rem]
                 xl:text-3xl xl:py-4 xl:px-10
-                "> <span class="text-nowrap">Fase 1</span> <input class="invisible h-0 w-0" type="radio" name="group1"> </label> <div class=" flex items-center scale-75 md:scale-150"> <custom-dialog class="outline-none"> <div class="open">  <i class=""> <svg class="flex my-auto" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="1.93357" y="1.28409" width="16.6463" height="16.6463" rx="8.32315" stroke="#0029FF" stroke-width="2.3537"></rect> <path d="M9.04517 7.53674H11.0163V14.1072H9.04517V7.53674ZM10.0439 6.8534C9.75917 6.8534 9.52044 6.75923 9.32771 6.57087C9.13497 6.38252 9.0386 6.14817 9.0386 5.86783C9.0386 5.59187 9.13497 5.35971 9.32771 5.17135C9.52044 4.97862 9.75698 4.88225 10.0373 4.88225C10.3133 4.88225 10.5454 4.97862 10.7338 5.17135C10.9265 5.35971 11.0229 5.59187 11.0229 5.86783C11.0229 6.14817 10.9287 6.38252 10.7404 6.57087C10.5564 6.75923 10.3242 6.8534 10.0439 6.8534Z" fill="#0029FF"></path> </svg> </i>   </div> <dialog class=" outline-none z-20 bg-black bg-opacity-50 h-screen w-screen fixed inset-0
+                "> <span class="text-nowrap">Fase 1</span> <input maxlength="25" class="invisible h-0 w-0" type="radio" name="group1"> </label> <div class=" flex items-center scale-75 md:scale-150"> <custom-dialog class="outline-none"> <div class="open">  <i class=""> <svg class="flex my-auto" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"> <rect x="1.93357" y="1.28409" width="16.6463" height="16.6463" rx="8.32315" stroke="#0029FF" stroke-width="2.3537"></rect> <path d="M9.04517 7.53674H11.0163V14.1072H9.04517V7.53674ZM10.0439 6.8534C9.75917 6.8534 9.52044 6.75923 9.32771 6.57087C9.13497 6.38252 9.0386 6.14817 9.0386 5.86783C9.0386 5.59187 9.13497 5.35971 9.32771 5.17135C9.52044 4.97862 9.75698 4.88225 10.0373 4.88225C10.3133 4.88225 10.5454 4.97862 10.7338 5.17135C10.9265 5.35971 11.0229 5.59187 11.0229 5.86783C11.0229 6.14817 10.9287 6.38252 10.7404 6.57087C10.5564 6.75923 10.3242 6.8534 10.0439 6.8534Z" fill="#0029FF"></path> </svg> </i>   </div> <dialog class=" outline-none z-20 bg-black bg-opacity-50 h-screen w-screen fixed inset-0
     m-0
     "> <div class="relative z-50 pointer-events-auto  w-full h-full flex items-center"> <div class="max-w-xl mx-[5%] sm:mx-auto flex flex-col gap-6 bg-gray-400 text-white text-center px-8 py-8 rounded-3xl"> <h3 class="font-bebas text-4xl">Formulario enviado</h3> <p>Te habilitaremos tus lecciones lo más pronto posible, te
                     avisaremos por medio de Email y mensaje cuando tus clases

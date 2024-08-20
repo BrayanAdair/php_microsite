@@ -1,41 +1,6 @@
 <!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.13.3"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><title>home page</title><meta name="description" content="Astro description"><link rel="stylesheet" href="/_astro/article.B222qwIW.css">
 <style>div[data-astro-cid-o2fqafbn]{-webkit-user-select:none;-moz-user-select:none;user-select:none}#sliderDragable[data-astro-cid-op6k2dlp]{-ms-overflow-style:none;scrollbar-width:none}#sliderDragable[data-astro-cid-op6k2dlp]::-webkit-scrollbar{display:none}
-</style><script type="module" src="/_astro/hoisted.RREGnK4g.js"></script></head> <body class="bg-gray-800 text-white font-urb"> <nav class="container z-20 relative mt-[29px] md:mt-[43px] flex justify-between px-[5%] md:gap-[87px] items-center"> <a class="md:mr-auto flex-shrink-0" href="/"> <img class="w-auto h-[1.9rem] md:h-[3.5rem]" src="/_astro/logo.Cg2ExKvT.png" alt=""></a> <div class="flex gap-8 "> <a href="/pricing" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Planes</p></a> <a href="/auth" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Iniciar sesion</p></a> <custom-lang class="relative place-content-center"> <button class="w-max p-2 hover:bg-gray-100 rounded-full"><img class="w-[20px]" src="/_astro/es.H8iErWca.png" alt=""></button> </custom-lang> <script>(function(){const srcPaths = {"es":"/_astro/es.H8iErWca.png","en":"/_astro/en.DKenLY1t.png","it":"/_astro/it.DlZE-5Xj.png"};
-
-
-    const paths = srcPaths
-    const langs = ["es", "en", "it"];
-    let userlang = localStorage.getItem("userlang")
-
-    if (!userlang) {
-        userlang = document.documentElement.lang || navigator.language.split("-")[-1];
-        if (!userlang in langs){
-            userlang = "en"
-        }
-        localStorage.setItem("userlang", userlang)
-    }
-    let actual = langs.indexOf(userlang)
-    
-    class Lang extends HTMLElement {
-        constructor() {
-            super();
-
-            // img selection img
-            const img = this.querySelector("img");
-            img.src = paths[langs[actual]];
-
-            // interactive btn
-            const btn = this.querySelector("button");
-            btn.addEventListener("click", () => {
-                actual = (actual + 1) % 3
-                localStorage.setItem("userlang", langs[actual])
-                img.src = paths[langs[actual]];
-            });
-        }
-    }
-
-    customElements.define("custom-lang", Lang);
-})();</script> </div> </nav>  <section class="relative min-h-[50vh] md:min-h-[80vh] w-full text-center flex items-center justify-around"> <div class="z-20 flex flex-col justify-around gap-7 items-center"> <div> <h1 class="text-[45px] lg:text-[62px] xl:text-[112px] font-bebas leading-none">
+</style><script type="module" src="/_astro/hoisted.B1OmNESG.js"></script></head> <body class="bg-gray-800 text-white font-urb"> <nav class="container z-20 relative mt-[29px] md:mt-[43px] flex justify-between px-[5%] md:gap-[87px] items-center"> <a class="md:mr-auto flex-shrink-0" href="/"> <img class="w-auto h-[1.9rem] md:h-[3.5rem]" src="/_astro/logo.Cg2ExKvT.png" alt=""></a> <div class="flex gap-8 "> <a href="/pricing" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Planes</p></a> <a href="/auth" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Iniciar sesion</p></a> <custom-lang class="relative place-content-center"> <button class="w-max p-2 hover:bg-gray-100 rounded-full"><img class="w-[20px]" src="" alt=""></button> </custom-lang>  </div> </nav>  <section class="relative min-h-[50vh] md:min-h-[80vh] w-full text-center flex items-center justify-around"> <div class="z-20 flex flex-col justify-around gap-7 items-center"> <div> <h1 class="text-[45px] lg:text-[62px] xl:text-[112px] font-bebas leading-none">
 Conviértete en <br class="md:hidden"> un <br class="hidden md:flex "> mejor atleta
 </h1> <p class="md:text-[32px] xl:text-[36px]">
 Lleva tu juego al siguiente <br> nivel y alcanza tus objetivos.
