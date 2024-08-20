@@ -14,13 +14,16 @@
               </li>
              
               <li class="nav-item dropdown">
-                <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
+              <a class="nav-link" id="profileDropdown" href="#" data-bs-toggle="dropdown">
                   <div class="navbar-profile">
-                    <img class="img-xs rounded-circle" src="./assets/images/faces/face15.jpg" alt="">
-                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Brayan Adair</p>
-                    <i class="mdi mdi-menu-down d-none d-sm-block"></i>
+                      <img class="img-xs rounded-circle" src="./assets/images/faces/face15.jpg" alt="">
+                      <p class="mb-0 d-none d-sm-block navbar-profile-name">
+                          <?php echo $_SESSION['user_nombres'] . ' ' . $_SESSION['user_apellidos']; ?>
+                      </p>
+                      <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                   </div>
-                </a>
+              </a>
+
                 <div class="dropdown-menu dropdown-menu-end navbar-dropdown preview-list" aria-labelledby="profileDropdown">
                   <h6 class="p-3 mb-0">Perfil</h6>
                   <div class="dropdown-divider"></div>

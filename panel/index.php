@@ -1,9 +1,9 @@
 <?php
-include 'utils/auth.php';
+include 'utils/authAdmin.php';
 
 $view = isset($_GET['view']) ? $_GET['view'] : 'dashboard';
 
-$allowed_views = ['dashboard', 'ejercicios', 'overlay'];
+$allowed_views = ['dashboard', 'rutinas', 'overlay'];
 
 if (!in_array($view, $allowed_views)) {
     $view = 'dashboard';
@@ -76,6 +76,7 @@ if (!in_array($view, $allowed_views)) {
     <!-- Custom js -->
     <script src="assets/js/proBanner.js"></script>
     <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/panel.js"></script>
     <!-- End custom js -->
   </body>
 </html>

@@ -15,9 +15,27 @@ $view = isset($_GET['view']) ? $_GET['view'] : 'dashboard';
                         <span class="count bg-success"></span>
                     </div>
                     <div class="profile-name">
-                        <h5 class="mb-0 font-weight-normal">Brayan Adair</h5>
-                        <span>Administrador</span>
+                        <h5 class="mb-0 font-weight-normal"><?php echo $_SESSION['user_nombres']; ?></h5>
+                        <span>
+                            <?php 
+                            switch ($_SESSION['user_role']) {
+                                case 1:
+                                    echo 'Root';
+                                    break;
+                                case 2:
+                                    echo 'Administrador';
+                                    break;
+                                case 3:
+                                    echo 'Usuario';
+                                    break;
+                                default:
+                                    echo 'Invitado';
+                                    break;
+                            }
+                            ?>
+                        </span>
                     </div>
+
                 </div>
                 <a href="#" id="profile-dropdown" data-bs-toggle="dropdown"><i class="mdi mdi-dots-vertical"></i></a>
                 <div class="dropdown-menu dropdown-menu-right sidebar-dropdown preview-list" aria-labelledby="profile-dropdown">
@@ -67,12 +85,12 @@ $view = isset($_GET['view']) ? $_GET['view'] : 'dashboard';
                 <span class="menu-title">Dashboard</span>
             </a>
         </li>
-        <li class="nav-item menu-items <?php echo $view == 'ejercicios' ? 'active' : ''; ?>">
-            <a class="nav-link" href="index.php?view=ejercicios">
+        <li class="nav-item menu-items <?php echo $view == 'rutinas' ? 'active' : ''; ?>">
+            <a class="nav-link" href="index.php?view=rutinas">
                 <span class="menu-icon">
                     <i class="mdi mdi-playlist-play"></i>
                 </span>
-                <span class="menu-title">Ejercicios</span>
+                <span class="menu-title">Rutinas</span>
             </a>
         </li>
         <li class="nav-item menu-items <?php echo $view == 'overlay' ? 'active' : ''; ?>">
