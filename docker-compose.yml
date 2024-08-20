@@ -1,15 +1,15 @@
 # version: '3'
 
 services:
-  #db:
-  #  image: mysql:5.7
-  #  environment:
-  #    MYSQL_ROOT_PASSWORD: my_secret_pw_shh
-  #    MYSQL_DATABASE: dbeasy
-  #    MYSQL_USER: root
-  #    MYSQL_PASSWORD: ""
-  #  ports:
-  #    - "9906:3306"
+  db:
+    image: mysql:5.7
+    environment:
+    #  MYSQL_ROOT_PASSWORD: my_secret_pw_shh
+    #  MYSQL_DATABASE: dbeasy
+      MYSQL_USER: root
+      MYSQL_PASSWORD: ""
+    # ports:
+    #   - "9906:3306"
   web:
     image: php:7.2.2-apache
     container_name: php_web
