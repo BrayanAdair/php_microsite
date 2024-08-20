@@ -1,129 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="generator" content="Astro v4.13.2">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <title>home page</title>
-    <meta name="description" content="Astro description">
-    <link rel="stylesheet" href="/_astro/article.B1WzM0um.css">
-    <script type="module" src="/_astro/hoisted.DaW7qkri.js"></script>
-</head>
-
-<body class="bg-gray-800 text-white font-urb">
-    <nav class="container z-20 relative mt-[29px] md:mt-[43px] flex justify-between px-[5%] md:gap-[87px] items-center">
-        <a class="md:mr-auto flex-shrink-0" href="/"> <img class="w-auto h-[1.9rem] md:h-[3.5rem]"
-                src="/_astro/logo.Cg2ExKvT.png" alt=""></a>
-        <div class="flex gap-8 "> <a href="/pricing"
-                class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md">
-                <p>Planes</p>
-            </a> <a href="/auth"
-                class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md">
-                <p>Iniciar sesion</p>
-            </a> <!-- <select class="select-selected" name="lang" id="">
-        <option value="">es</option>
-        <option value="">en</option>
-        <option value="">it</option>
-    </select> --> </div>
-    </nav>
-    <section class="container py-16 pb-32 px-[5%] md:px-[20%] text-sm">
-        <div class="flex bg-gray-400 mx-[5%] p-[5%] md:mx-auto max-w-xl rounded-2xl">
-            <div id="form" class="flex overflow-hidden scroll-smooth items-center">
-                <div id="login" class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6">
-                    <div class="container text-center">
-                        <h2 class="font-bebas text-4xl  leading-none">Ingresa a tu cuenta</h2> <span
-                            class="text-xl leading-none">y descubre el mundo del coaching</span>
-                    </div>
-                    <form id="loginForm" action="/panel/controladores/login.php" method="POST"
-                        class="flex flex-col gap-3">
-                        <div> <label class="block mb-1 text-base text-gray-900 dark:text-white">
-                                Correo
-                            </label> <input value="angel@gmail.com" type="email" name="email"
-                                class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="correo electronico" required> </div>
-                        <div> <label class="block mb-1 text-base text-gray-900 dark:text-white">
-                                Contraseña
-                            </label> <input value="paswordsupersegura" type="password" name="password"
-                                class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="******" required> </div> <button type="submit"
-                            class="bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap text-center my-4">
-                            Enviar formulario
-                        </button>
-                    </form> <a class="flex mx-auto text-lg" href="#register">Ya tengo cuenta</a>
-                </div>
-                <div id="register" class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6">
-                    <div class="container text-center">
-                        <h2 class="font-bebas text-4xl  leading-none">Crea tu cuenta</h2> <span
-                            class="text-xl leading-none">y descubre el mundo del coaching</span>
-                    </div>
-                    <form action="." class="flex flex-col gap-3">
-                        <div class="flex flex-col md:flex-row gap-4 w-full">
-                            <div class="w-full"> <label class="block mb-1 text-base text-gray-900 dark:text-white">
-                                    Nombre
-                                </label> <input type="text" name="name"
-                                    class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="nombre" required> </div>
-                            <div class="w-full"> <label class="block mb-1 text-base text-gray-900 dark:text-white">
-                                    Apellido
-                                </label> <input type="text" name="last_name"
-                                    class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                    placeholder="apellido" required> </div>
-                        </div>
-                        <div> <label class="block mb-1 text-base text-gray-900 dark:text-white">
-                                Correo
-                            </label> <input type="email" name="email"
-                                class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="correo electronico" required> </div>
-                        <div> <label class="block mb-1 text-base text-gray-900 dark:text-white">
-                                Contraseña
-                            </label> <input type="password" name="password"
-                                class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                                placeholder="******" required> </div> <!-- terms -->
-                        <div class="flex gap-4"> <input type="checkbox" required name="" id="">
-                            <p>
-                                Acepto las políticas de privacidad para toma de
-                                datos personales detalladas en los
-                                <a class="text-primary font-bold text-xs" href="/#">T&C</a>
-                            </p>
-                        </div> <!-- terms --> <button formaction="/profile" type="submit"
-                            data-modal-target="static-modal"
-                            class="bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap  text-center">
-                            Enviar formulario
-                        </button>
-                    </form> <a class="flex mx-auto" href="#login">Ya tengo cuenta</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <footer class="min-h-[50vh] bg-primary grid place-content-center place-items-center py-24 md:py-56">
-        <div class="flex flex-row flex-wrap items-center md:items-start container px-[10%] gap-10 justify-center">
-            <div class="flex-1"> <a class="md:mr-auto flex-shrink-0" href="/"> <img class="w-auto mb-10"
-                        src="/_astro/logo.Cg2ExKvT.png" alt=""></a>
-                <ul>
-                    <li>Carrera 51B #80 - 58 Oficina 1403B</li>
-                    <li>Barranquilla 080001, Colombia</li>
-                    <li>Whatsapp: +57 3217294931</li>
-                </ul>
-            </div>
-            <div class="flex-0 md:flex-1 ">
-                Horem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
-                turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
-                nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
-                tellus elit sed risus
-            </div>
-            <div class="flex gap-8 justify-center flex-1"> <a class="" href="/"> <img class="w-auto"
-                        src="/_astro/fb.Brcdf96w.svg" alt=""></a> <a class="" href="/"> <img class="w-auto"
-                        src="/_astro/linkedin.Co21R8kM.svg" alt=""></a> <a class="" href="/"> <img class="w-auto"
-                        src="/_astro/ig.CTHHXkLx.svg" alt=""></a> </div>
-        </div>
-    </footer>
-</body>
-
-</html>
+<!DOCTYPE html><html lang="es"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.13.3"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"><title>home page</title><meta name="description" content="Astro description"><link rel="stylesheet" href="/_astro/article.B222qwIW.css"><script type="module" src="/_astro/hoisted.De2duPkC.js"></script></head> <body class="bg-gray-800 text-white font-urb"> <nav class="container z-20 relative mt-[29px] md:mt-[43px] flex justify-between px-[5%] md:gap-[87px] items-center"> <a class="md:mr-auto flex-shrink-0" href="/"> <img class="w-auto h-[1.9rem] md:h-[3.5rem]" src="/_astro/logo.Cg2ExKvT.png" alt=""></a> <div class="flex gap-8 "> <a href="/pricing" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Planes</p></a> <a href="/auth" class="flex-shrink-0 py-2 px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md"><p>Iniciar sesion</p></a> <custom-lang class="relative place-content-center"> <button class="w-max p-2 hover:bg-gray-100 rounded-full"><img class="w-[20px]" src="" alt=""></button> </custom-lang>  </div> </nav>  <div class="container px-[5%]"> <div class="relative flex w-full justify-start gap-4 items-center my-8 font-bold"> <a href="/" class=" flex gap-2 items-center text-base left-0"> <svg class="rotate-180" xmlns="http://www.w3.org/2000/svg" width="11" height="19" viewBox="0 0 11 19" fill="none"> <path d="M1.4943 2L9.40845 9.91414L1.48101 17.8416" stroke="white" stroke-width="2.04849" stroke-linecap="round"></path> </svg>
+Back
+</a> </div> </div> <section class="container  pb-32 px-[5%] md:px-[20%] text-sm"> <div class="flex bg-gray-400 mx-[5%] p-[5%] md:mx-auto max-w-xl rounded-2xl"> <div id="form" class="flex overflow-hidden scroll-smooth items-center"> <div id="login" class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6"> <div class="container text-center"> <h2 class="font-bebas text-4xl  leading-none ">Ingresa a tu cuenta</h2> <span class="text-xl leading-none">y descubre el mundo del coaching</span> </div> <form id="loginForm" action="." class="flex flex-col gap-3"> <div> <label class="block mb-1 text-base text-white">
+Correo
+</label> <input maxlength="25" type="email" name="email" class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="correo electronico" required> </div> <div> <label class="block mb-1 text-base text-white">
+Contraseña
+</label> <input maxlength="25" type="password" name="password" class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="******" required> </div> <button type="submit" class="bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap text-center my-4">
+Enviar formulario
+</button> </form> <a class="flex mx-auto text-xl md:text-[1.75rem]" href="#register">Aún no tengo cuenta</a> </div> <div id="register" class="flex h-full justify-center flex-col flex-shrink-0 w-full gap-6"> <div class="container text-center"> <h2 class="font-bebas text-4xl  leading-none ">Crea tu cuenta</h2> <span class="text-xl leading-none">y descubre el mundo del coaching</span> </div> <form action="." class="flex flex-col gap-3"> <div class="flex flex-col md:flex-row gap-4 w-full"> <div class="w-full"> <label class="block mb-1 text-base text-white">
+Nombre
+</label> <input maxlength="25" type="text" name="name" class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="nombre" required> </div> <div class="w-full"> <label class="block mb-1 text-base text-white">
+Apellido
+</label> <input maxlength="25" type="text" name="last_name" class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="apellido" required> </div> </div> <div> <label class="block mb-1 text-base text-white">
+Correo
+</label> <input maxlength="25" type="email" name="email" class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="correo electronico" required> </div> <div> <label class="block mb-1 text-base text-white">
+Contraseña
+</label> <input maxlength="25" type="password" name="password" class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500" placeholder="******" required> </div> <!-- terms --> <div class="flex gap-4"> <input maxlength="25" type="checkbox" required name="" id=""> <p>
+Acepto las políticas de privacidad para toma de
+            datos personales detalladas en los
+<a class="text-primary font-bold text-xs" href="/#">T&C</a> </p> </div> <!-- terms --> <button formaction="/profile" type="submit" data-modal-target="static-modal" class="bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap  text-center">
+Enviar formulario
+</button> </form> <a class="flex mx-auto text-xl md:text-[1.75rem]" href="#login">Ya tengo cuenta</a> </div> </div> </div> </section>  <footer class="min-h-[50vh] bg-primary grid place-content-center place-items-center py-24 md:py-56"> <div class="flex flex-row flex-wrap items-center md:items-start container px-[10%] gap-10 justify-center"> <div class="flex-1"> <a class="md:mr-auto flex-shrink-0" href="/"> <img class="w-auto mb-10" src="/_astro/logo.Cg2ExKvT.png" alt=""></a> <ul> <li>Carrera 51B #80 - 58 Oficina 1403B</li> <li>Barranquilla 080001, Colombia</li> <li>Whatsapp: +57 3217294931</li> </ul> </div> <div class="flex-0 md:flex-1 ">
+Horem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu
+            turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus
+            nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
+            tellus elit sed risus
+</div> <div class="flex gap-8 justify-center flex-1"> <a class="" href="/"> <img class="w-auto" src="/_astro/fb.DzAh0rnL.svg" alt=""></a> <a class="" href="/"> <img class="w-auto" src="/_astro/linkedin.ChpncX26.svg" alt=""></a> <a class="" href="/"> <img class="w-auto" src="/_astro/ig.D1ehxcQB.svg" alt=""></a> </div> </div> </footer>  </body> </html>
