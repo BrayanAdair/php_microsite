@@ -29,16 +29,17 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     header("Location: /survey");
                 }
             } else {
-                echo "Rol de usuario no reconocido";
+                header("Location: /auth?alerta=error&mensaje=Rol de usuario no reconocido.&titulo=Error");
             }
             exit;
         } else {
-            echo "Contraseña incorrecta";
+            header("Location: /auth?alerta=error&mensaje=Contraseña incorrecta.&titulo=Error");
+            exit;
         }
     } else {
-        echo "Usuario no encontrado";
+        header("Location: /auth?alerta=error&mensaje=Usuario no encontrado.&titulo=Error");
+        exit;
     }
-    
 }
 
 // Cerrar conexión
