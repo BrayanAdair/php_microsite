@@ -21,6 +21,7 @@
 <?php
     $page_name = "Pricing";
     include '../panel/vistas/web/headerViews.php';
+    include '../panel/utils/auth.php';
 ?>
     <section id="planes" class="py-16 md:py-32">
         <div class="container relative pb-16 flex justify-center flex-col items-center">

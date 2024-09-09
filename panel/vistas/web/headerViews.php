@@ -41,7 +41,7 @@ if (isset($_SESSION['user_id'])) {
                     <img src="data:image/jpeg;base64,<?= base64_encode($foto_perfil); ?>" alt="Foto de perfil" class="h-6 w-6 rounded-full">
                 <?php else: ?>
                     <!-- Mostrar imagen por defecto si no tiene foto -->
-                    <img src="./panel/assets/images/auth/perfil.png" alt="Foto por defecto" class="h-6 w-6 rounded-full">
+                    <img src="../panel/assets/images/auth/perfil.png" alt="Foto por defecto" class="h-6 w-6 rounded-full">
                 <?php endif; ?>
             </a>
         <?php else: ?>

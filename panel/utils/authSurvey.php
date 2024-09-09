@@ -21,7 +21,7 @@ $stmt->execute();
 $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($user['status'] != 'A') {
-    header("Location: /payment");
+    header("Location: /pricing");
     exit;
 }
 
