@@ -13,15 +13,35 @@
         rel="stylesheet">
     <title>home page</title>
     <meta name="description" content="Astro description">
-    <link rel="stylesheet" href="/_astro/article.DOc-4UcP.css">
+    <link rel="stylesheet" href="/_astro/article.DzhJuGNJ.css">
+    <link rel="stylesheet" href="/panel/assets/css/easy.css">
     <script type="module" src="/_astro/hoisted.De2duPkC.js"></script>
+    <!-- CDN alertas -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </head>
 
-<body class="bg-gray-800 text-white font-urb min-w-[100vw]">
+<body class="bg-gray-800 text-white font-urb">
 <?php
     include '../panel/utils/auth.php';
     $page_name = "Set-Profile";
-    include '../panel/vistas/web/header.php';
+    include '../panel/vistas/web/headerViews.php';
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
+
+    $nombre = isset($_SESSION['user_nombres']) ? $_SESSION['user_nombres'] : '';
+    $apellidos = isset($_SESSION['user_apellidos']) ? $_SESSION['user_apellidos'] : '';
+    $email = isset($_SESSION['user_email']) ? $_SESSION['user_email'] : '';
+    //paa la foto de perfil
+  
+    include '../panel/utils/config.php';
+    $id_usuario = $_SESSION['user_id'];
+    $stmt = $conn->prepare("SELECT foto FROM usuarios WHERE id_usuario = ?");
+    $stmt->execute([$id_usuario]);
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    $foto = $user['foto'] ?? null; // Si no tiene foto, será null
 ?>
     <div class="container px-[5%]">
         <div class="relative flex w-full justify-start gap-4 items-center my-8 font-bold"> <a href="/"
@@ -35,26 +55,26 @@
     </div>
     <section class="container pb-32 px-[5%] md:px-[20%] text-sm">
         <div class="flex flex-col bg-gray-400 mx-[5%] p-[5%] pt-[2%] md:mx-auto max-w-xl rounded-2xl">
-            <div class="flex w-full justify-center">
-                <div class="flex my-4"> <svg class="h-24 w-24" width="57" height="56" viewBox="0 0 57 56" fill="none"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.71875" y="0.240631" width="55.5187" height="55.5187" rx="27.7594" fill="#D1D1D1">
-                        </rect>
-                        <path fill-rule="evenodd" clip-rule="evenodd"
-                            d="M36.8061 22.4481C36.8061 27.0474 33.0776 30.7759 28.4783 30.7759C23.8789 30.7759 20.1504 27.0474 20.1504 22.4481C20.1504 17.8488 23.8789 14.1203 28.4783 14.1203C33.0776 14.1203 36.8061 17.8488 36.8061 22.4481ZM34.0301 22.4481C34.0301 25.5143 31.5445 28 28.4783 28C25.412 28 22.9264 25.5143 22.9264 22.4481C22.9264 19.3819 25.412 16.8963 28.4783 16.8963C31.5445 16.8963 34.0301 19.3819 34.0301 22.4481Z"
-                            fill="#0029FF"></path>
-                        <path
-                            d="M28.4783 34.9398C19.492 34.9398 11.8355 40.2536 8.91895 47.6981C9.62944 48.4036 10.3779 49.071 11.161 49.6968C13.3328 42.8619 20.1459 37.7158 28.4783 37.7158C36.8106 37.7158 43.6237 42.8619 45.7955 49.6968C46.5786 49.071 47.3271 48.4036 48.0376 47.6981C45.121 40.2536 37.4645 34.9398 28.4783 34.9398Z"
-                            fill="#0029FF"></path>
-                    </svg> </div>
-            </div>
-            <form action="." class="flex flex-col gap-3 w-full">
+            <form action="../panel/controladores/updatePerfil.php" method="POST" enctype="multipart/form-data" class="flex flex-col gap-3 w-full">
+                <div class="flex w-full justify-center">
+                <label for="profile_image" class="cursor-pointer">
+                        <?php if ($foto): ?>
+                            <img src="data:image/jpeg;base64,<?= base64_encode($foto); ?>" alt="Foto de perfil" class="h-20 w-20 rounded-full profile-image">
+                        <?php else: ?>
+                            <!-- Mostrar imagen por defecto si no tiene una foto -->
+                            <img src="/panel/assets/images/auth/perfil.png" alt="Foto por defecto" class="h-20 w-20 rounded-full profile-image">
+                        <?php endif; ?>
+                    </label>
+             
+                    <input type="file" id="profile_image" name="profile_image" accept="image/*" style="display:none;">
+                    
+                 </div>
                 <div class="w-full"> <label class="block mb-1 text-base text-white">
                         Nombre
                     </label>
                     <div class="flex gap-2"> <input maxlength="25" type="text" name="name"
                             class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                            value="nombre" required>
+                            value="<?= htmlspecialchars($nombre); ?>">
                         <div
                             class="text-sm rounded-lg block p-1 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500">
                             <svg class="scale-75" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
@@ -70,7 +90,7 @@
                     </label>
                     <div class="flex gap-2"> <input maxlength="25" type="text" name="last_name"
                             class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                            value="apellido" required>
+                            value="<?= htmlspecialchars($apellidos); ?>">
                         <div
                             class="text-sm rounded-lg block p-1 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500">
                             <svg class="scale-75" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
@@ -86,7 +106,7 @@
                     </label>
                     <div class="flex gap-2"> <input maxlength="25" type="email" name="email"
                             class="text-sm rounded-lg block w-full p-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                            value="correo electronico" required>
+                            value="<?= htmlspecialchars($email); ?>">
                         <div
                             class="text-sm rounded-lg block p-1 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500">
                             <svg class="scale-75" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
@@ -102,7 +122,7 @@
                     </label>
                     <div class="flex gap-2"> <input maxlength="25" type="password" name="password"
                             class="text-lg rounded-lg block w-full p-1 px-2.5 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500"
-                            value="************" required>
+                             >
                         <div
                             class="text-sm rounded-lg block p-1 bg-gray-600 border-transparent placeholder-gray-100 text-white focus:ring-blue-500 focus:border-blue-500">
                             <svg class="scale-75" xmlns="http://www.w3.org/2000/svg" width="35" height="35"
@@ -112,16 +132,17 @@
                                     fill="#202123"></path>
                             </svg> </div>
                     </div>
-                </div> <button formaction="/profile" type="submit" data-modal-target="static-modal"
+                </div> <button type="submit" data-modal-target="static-modal"
                     class="bg-primary p-2.5 px-6 rounded-lg text-nowrap text-center mt-4">
                     Guardar cambios
                 </button>
             </form>
         </div>
     </section>
-<?php
-    include 'panel/vistas/web/footer.php';
-?>
+    <?php
+    include '../panel/vistas/web/footer.php';
+    include '../panel/utils/alertas.php';
+    ?>
 </body>
 
 </html>

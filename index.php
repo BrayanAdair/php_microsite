@@ -65,7 +65,7 @@
                 Pasos de coaching
             </h2>
             <h4 class="md:text-4xl w-[60%]">
-                Subtitulo para indicar alguna información de interés
+            Il tuo allenamento è pronto, inizia con i tuoi esercizi personalizzati dal nostro team.
             </h4>
         </div>
         <div class="sliderDragable flex w-full overflow-y-scroll overflow-scroll sm:overflow-auto"

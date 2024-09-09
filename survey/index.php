@@ -83,7 +83,7 @@
 <?php
     include '../panel/utils/authSurvey.php';
     $page_name = "Survey";
-    include '../panel/vistas/web/header.php';
+    include '../panel/vistas/web/headerViews.php';
         
 ?>
     <section class="container py-16 px-[5%]">

@@ -20,7 +20,7 @@
 <body class="bg-gray-800 text-white font-urb min-w-[100vw]">
 <?php
     $page_name = "Pricing";
-    include '../panel/vistas/web/header.php';
+    include '../panel/vistas/web/headerViews.php';
 ?>
     <section id="planes" class="py-16 md:py-32">
         <div class="container relative pb-16 flex justify-center flex-col items-center">
@@ -66,9 +66,9 @@
                                     <li>Programación de entrenamiento</li>
                                 </ul>
                             </div>
-                        </div> <a href="/payment"
-                            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Adquirir
-                            membresia</a>
+                        </div> 
+                        <a href="/payment?plan=Silver&price=24.90" class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Adquirir membresia</a>
+
                     </div>
                 </div>
                 <div class="relative z-10 flex flex-col max-w-md min-h-full">
@@ -100,9 +100,9 @@
                                     <li>Video explicativo de ejercicios</li>
                                 </ul>
                             </div>
-                        </div> <a href="/payment"
-                            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Adquirir
-                            membresia</a>
+                        </div>
+                        <a href="/payment?plan=Gold&price=29.90" class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Adquirir membresia</a>
+
                     </div>
                 </div>
             </div>

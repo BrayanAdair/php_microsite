@@ -13,6 +13,7 @@
         }
     ],
     "require": {
-        "guzzlehttp/guzzle": "^7.9"
+        "guzzlehttp/guzzle": "^7.9",
+        "stripe/stripe-php": "^15.8"
     }
 }

@@ -45,10 +45,12 @@
                     <h4 class="card-title">Resultado</h4>
                     <p class="card-description"> Visualiza el prompt en vivo </p>
                     <div id="resultadoPrompt">
-                   
+                        <!-- Aquí se mostrará la respuesta -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<script src="assets/js/ia.js"></script>

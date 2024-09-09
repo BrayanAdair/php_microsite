@@ -24,7 +24,7 @@
 <body class="bg-gray-800 text-white font-urb min-w-[100vw]">
 <?php
     $page_name = "Auth";
-    include '../panel/vistas/web/header.php';
+    include '../panel/vistas/web/headerViews.php';
 ?>
     <div class="container px-[5%]">
         <div class="relative flex w-full justify-start gap-4 items-center my-8 font-bold"> <a href="/"

@@ -21,7 +21,7 @@ $user = $stmt->fetch(PDO::FETCH_ASSOC);
 
 // Validar si el status de pago no existe o no es 'A'
 if ($user['status'] != 'A') {
-    header("Location: /paying");
+    header("Location: /payment");
     exit;
 }
 
