@@ -11,22 +11,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>home page</title>
-    <meta name="description" content="Astro description">
+    <title>2Easy | Prezzi</title>
+    <meta name="Prezzi 2Easy" content="Astro description">
     <link rel="stylesheet" href="/_astro/article.DOc-4UcP.css">
     <script type="module" src="/_astro/hoisted.De2duPkC.js"></script>
 </head>
 
 <body class="bg-gray-800 text-white font-urb min-w-[100vw]">
-<?php
+    <?php
     $page_name = "Pricing";
     include '../panel/vistas/web/headerViews.php';
     include '../panel/utils/auth.php';
-?>
+    ?>
     <section id="planes" class="py-16 md:py-32">
         <div class="container relative pb-16 flex justify-center flex-col items-center">
-            <h2 class="font-bebas text-5xl md:text-8xl">Planes y precios</h2> <span class="md:text-2xl">Elige el
-                perfecto para ti</span>
+            <h2 class="font-bebas text-5xl md:text-8xl">Piani e prezzi</h2>
+            <span class="md:text-2xl">Scegli il perfetto per te</span>
             <div class="absolute -top-44 grid place-content-center">
                 <div
                     class="w-auto aspect-square mix-blend-overlay bg-white rounded-full blur-2xl md:blur-3xl h-32 md:h-96">
@@ -52,30 +52,33 @@
                                                 transform="translate(0.946289 0.716919)"></rect>
                                         </clipPath>
                                     </defs>
-                                </svg> </h4>
+                                </svg>
+                            </h4>
                             <p class="mb-4">
-                                Obsesionada con todo lo relacionado con el entrenamiento
+                                Ossessionato da tutto ciò che riguarda la formazione
                             </p>
                             <div class="pt-4 flex flex-col gap-2 w-full">
                                 <h5 class="font-bebas text-5xl md:text-7xl leading-[0.5]">
-                                    € 24,90 </h5> <span>Por cada mes</span>
+                                    € 24,90 </h5> <span>Per ogni mese</span>
                             </div>
                             <hr class="border border-white-200 w-full">
                             <div class="flex flex-col text-left gap-2 text-xs md:text-xl mb-auto">
-                                <h5>incluye:</h5>
+                                <h5>include:</h5>
                                 <ul class="ml-5  flex flex-col gap-2">
-                                    <li>Programación de entrenamiento</li>
+                                    <li>Programmazione della formazione</li>
                                 </ul>
                             </div>
-                        </div> 
-                        <a href="/payment?plan=Silver&price=24.90" class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Adquirir membresia</a>
+                        </div>
+                        <a href="/payment?plan=Silver&price=24.90"
+                            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Acquisire
+                            appartenenza</a>
 
                     </div>
                 </div>
                 <div class="relative z-10 flex flex-col max-w-md min-h-full">
                     <div class="absolute flex -top-6 inset-x-0 z-10 "> <span
                             class="flex mx-auto bg-primary pt-0.5 pb-[14px] px-[22px] rounded-lg text-white">
-                            Más popular 🔥
+                            Il più popolare 🔥
                         </span> </div>
                     <div class="relative z-20 h-full flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center">
                         <div class="flex flex-col items-center gap-4">
@@ -87,23 +90,24 @@
                                         fill="#F1B32B"></path>
                                 </svg> </h4>
                             <p class="mb-4">
-                                Obsesionada con todo lo relacionado con el entrenamiento
+                                Ossessionato da tutto ciò che riguarda la formazione
                             </p>
                             <div class="pt-4 flex flex-col gap-2 w-full">
                                 <h5 class="font-bebas text-5xl md:text-7xl leading-[0.5]">
-                                    € 29,90 </h5> <span>Por cada mes</span>
+                                    € 29,90 </h5> <span>Per ogni mese</span>
                             </div>
                             <hr class="border border-white-200 w-full">
                             <div class="flex flex-col text-left gap-2 text-xs md:text-xl mb-auto">
-                                <h5>incluye:</h5>
+                                <h5>include:</h5>
                                 <ul class="ml-5  flex flex-col gap-2">
-                                    <li>Programación de entrenamiento</li>
-                                    <li>Video explicativo de ejercicios</li>
+                                    <li>Programmazione della formazione</li>
+                                    <li>Video esplicativo degli esercizi</li>
                                 </ul>
                             </div>
                         </div>
-                        <a href="/payment?plan=Gold&price=29.90" class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Adquirir membresia</a>
-
+                        <a href="/payment?plan=Gold&price=29.90"
+                            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Acquisire
+                            appartenenza</a>
                     </div>
                 </div>
             </div>
@@ -125,9 +129,7 @@
                 nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum
                 tellus elit sed risus
             </div>
-            <div class="flex gap-8 justify-center flex-1"> <a class="" href="/"> <img class="w-auto"
-                        src="/_astro/fb.DzAh0rnL.svg" alt=""></a> <a class="" href="/"> <img class="w-auto"
-                        src="/_astro/ig.D1ehxcQB.svg" alt=""></a> <a class="" href="/"> <img class="w-auto"
+            <div class="flex gap-8 justify-center flex-1"> <a class="" href="/"> <img class="w-auto"  src="/_astro/fb.DzAh0rnL.svg" alt=""></a> <a class="" href="/"> <img class="w-auto" src="/_astro/ig.D1ehxcQB.svg" alt=""></a> <a class="" href="/"> <img class="w-auto"
                         src="/_astro/linkedin.ChpncX26.svg" alt=""></a> </div>
         </div>
     </footer>
