@@ -14,6 +14,18 @@
     <title>home page</title>
     <meta name="description" content="Astro description">
     <style>
+        .StripeElement {
+            box-sizing: border-box;
+            height: 40px;
+            padding: 10px 14px;
+            border: 1px solid transparent;
+            border-radius: 1rem;
+            background-color: white;
+            box-shadow: 0 1px 3px 0 #e6ebf1;
+            -webkit-transition: box-shadow 150ms ease;
+            transition: box-shadow 150ms ease;
+        }
+
         .dragable[data-astro-cid-mv2qmi5q] {
             -ms-overflow-style: none;
             scrollbar-width: none;
@@ -28,6 +40,7 @@
     <!-- Custom -->
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script defer src="https://cdn.tailwindcss.com"></script>
+
 </head>
 
 <body class="bg-gray-800 text-white font-urb w-full">
@@ -53,11 +66,12 @@
                     adipiscing elit. Etiam eu turpis molestie ipsum dolor sit amet, consectetur</span>
             </div>
         </div>
-    
-        <form action="../panel/controladores/server.php" method="POST" id="payment-form" data-astro-cid-mv2qmi5q class="grid grid-cols-4 gap-4">
-            <div class="col-span-4" id='payment-element'></div>
 
-            <div class="col-span-4 rounded-2xl bg-gray-400 p-6 flex flex-col" data-astro-cid-mv2qmi5q>
+        <form action="../panel/controladores/server.php" method="POST" id="payment-form" data-astro-cid-mv2qmi5q
+            class="flex flex-col gap-4">
+            <div id='card-element'></div>
+
+            <div class="rounded-2xl bg-gray-600 p-6 flex flex-col" data-astro-cid-mv2qmi5q>
                 <h3 class="text-[28px] md:text-3xl text-center font-bebas" data-astro-cid-mv2qmi5q>
                     Resumen de pago
                 </h3>
@@ -67,13 +81,17 @@
                 text-sm md:text-2xl
                 flex flex-col
                 gap-4 md:gap-8" data-astro-cid-mv2qmi5q>
-                    <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Plan:</span><span data-astro-cid-mv2qmi5q><?php echo $plan; ?></span></li>
-                    <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Pago de plan:</span><span data-astro-cid-mv2qmi5q>€<?php echo $price; ?></span></li>
-                    <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Total a pagar:</span><span data-astro-cid-mv2qmi5q>€<?php echo $price; ?></span></li>
+                    <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Plan:</span><span
+                            data-astro-cid-mv2qmi5q><?php echo $plan; ?></span></li>
+                    <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Pago de plan:</span><span
+                            data-astro-cid-mv2qmi5q>€<?php echo $price; ?></span></li>
+                    <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Total a pagar:</span><span
+                            data-astro-cid-mv2qmi5q>€<?php echo $price; ?></span></li>
                 </ul>
                 <div class="text-[10px] md:text-sm mt-auto" data-astro-cid-mv2qmi5q>
                     <label class="flex gap-2 md:gap-4 items-start" data-astro-cid-mv2qmi5q>
-                        <input maxlength="25" class="mt-2" type="checkbox" required name="" id="" data-astro-cid-mv2qmi5q>
+                        <input maxlength="25" class="mt-2" type="checkbox" required name="" id=""
+                            data-astro-cid-mv2qmi5q>
                         <p class="" data-astro-cid-mv2qmi5q>
                             Acepto las políticas de privacidad para toma de datos personales detalladas en los
                             <a class="text-primary font-bold text-xs" href="/#" data-astro-cid-mv2qmi5q>T&C</a>
@@ -89,16 +107,17 @@
                 </div>
             </div>
 
-            <button type="submit" class="w-full col-span-4 mt-8 bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap" data-astro-cid-mv2qmi5q>
+            <button type="submit"
+                class="w-full col-span-4 mt-8 bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap"
+                data-astro-cid-mv2qmi5q>
                 Completar pago
             </button>
 
-            <div id="payment-errors"></div>
+            <div id="card-errors" class="col-span-4 text-xl text-red-500"></div>
         </form>
     </section>
-
-    <script src="https://js.stripe.com/v3/"></script>
-    <script type="module" src='../panel//assets/js/stripe.js'></script>
+    <script defer src="https://js.stripe.com/v3/"></script>
+    <script type="module" src="../panel/assets/js/stripe.js"></script>
 
     <?php
     include '../panel/vistas/web/footer.php';

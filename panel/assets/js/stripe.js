@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const PUBLIC_KEY = 'API KEY AQUI'
+  // ------> PUBLIC KEY AQUI <-------
+  const PUBLIC_KEY =
+    'pk_test_51PsU6WKmkO926sRH5ttqZsMnSCWLI9BCVDk2KX2dINoZCYlCmHAH9mb6i9uZpTWDFakRy3lwIuJn1VN7VyEokq4N00rG2q6L6b'
+  // ------> PUBLIC KEY AQUI <-------
+
   const stripe = Stripe(PUBLIC_KEY)
 
   // Obtenemos el precio de las query params
@@ -9,28 +13,42 @@ document.addEventListener('DOMContentLoaded', function () {
   // Opciones
   const options = {
     mode: 'payment',
-    currency: 'usd',
-    amount: 100 * price,
+    currency: 'eur',
+    amount: price * 100,
   }
 
-  // Configuraciones
-  const config = {
-    layout: {
-      type: 'accordion',
-      defaultCollapsed: false,
-      radios: false,
-      spacedAccordionItems: false,
+  // Estilos
+  const styles = {
+    style: {
+      base: {
+        iconColor: '#666EE8',
+        color: '#2e2e2e',
+        fontWeight: '500',
+        fontFamily: 'Roboto, Open Sans, Segoe UI, sans-serif',
+        fontSize: '16px',
+        fontSmoothing: 'antialiased',
+        ':-webkit-autofill': {
+          color: '#2e2e2e',
+        },
+        '::placeholder': {
+          color: '#2e2e2e',
+        },
+      },
+      invalid: {
+        iconColor: '#FFC7EE',
+        color: '#FFC7EE',
+      },
     },
   }
 
   // Creamos y montamos el elemento
   const elements = stripe.elements(options)
-  const paymentElement = elements.create('payment', config)
-  paymentElement.mount('#payment-element')
+  const card = elements.create('card', styles)
+  card.mount('#card-element')
 
   // Maneja el cambio de tarjeta
-  paymentElement.on('change', function (event) {
-    var displayError = document.getElementById('payment-errors')
+  card.on('change', function (event) {
+    var displayError = document.getElementById('card-errors')
     if (event.error) {
       displayError.textContent = event.error.message
     } else {
@@ -39,26 +57,30 @@ document.addEventListener('DOMContentLoaded', function () {
   })
 
   // Maneja la presentación del formulario
-  var form = document.getElementById('payment-form')
-  form.addEventListener('submit', function (event) {
+  const form = document.getElementById('payment-form')
+  form.addEventListener('submit', async function (event) {
     event.preventDefault()
 
-    stripe.createToken(paymentElement).then(function (result) {
-      if (result.error) {
-        // Muestra los errores en el formulario
-        var errorElement = document.getElementById('payment-errors')
-        errorElement.textContent = result.error.message
-      } else {
-        // Envia el token al servidor
-        stripeTokenHandler(result.token)
-      }
-    })
+    const res = await stripe.createToken(card)
+
+    // Muestra los errores en el formulario
+    if (res.error) {
+      const errorElement = document.getElementById('card-errors')
+      errorElement.textContent = res.error.message
+
+      return
+    }
+
+    // Envia el token al servidor
+    const token = res.token
+    stripeTokenHandler(token)
   })
 
   // Inserta el token de Stripe en un campo oculto y envía el formulario
   function stripeTokenHandler(token) {
-    var form = document.getElementById('payment-form')
-    var hiddenInput = document.createElement('input')
+    const form = document.getElementById('payment-form')
+    const hiddenInput = document.createElement('input')
+
     hiddenInput.setAttribute('type', 'hidden')
     hiddenInput.setAttribute('name', 'stripeToken')
     hiddenInput.setAttribute('value', token.id)
