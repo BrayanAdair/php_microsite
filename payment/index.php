@@ -11,8 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>home page</title>
-    <meta name="description" content="Astro description">
+    <title>2Easy | Pagamento</title>
+    <meta name="Pagamento 2Easy" content="Astro description">
     <style>
         .StripeElement {
             box-sizing: border-box;
@@ -39,7 +39,6 @@
     <script type="module" src="/_astro/hoisted.De2duPkC.js"></script>
     <!-- Custom -->
     <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script defer src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
@@ -61,9 +60,10 @@
                 </div>
             </div>
             <div class="container text-center">
-                <h2 class="font-bebas text-4xl  leading-none  text-[33px] md:text-[100px] mb-2 ">completa TU PAGO</h2>
-                <span class="text-xl leading-none text-sm md:text-[40px] ">Horem ipsum dolor sit amet, consectetur
-                    adipiscing elit. Etiam eu turpis molestie ipsum dolor sit amet, consectetur</span>
+                <h2 class="font-bebas text-4xl  leading-none  text-[33px] md:text-[100px] mb-2 ">completa il TUO
+                    PAGAMENTO</h2>
+                <span class="text-lg leading-none text-sm md:text-[40px] ">Completa il tuo pagamento per finalizzare
+                    l'ordine. Grazie per aver scelto i nostri servizi.</span>
             </div>
         </div>
 
@@ -73,7 +73,7 @@
 
             <div class="rounded-2xl bg-gray-600 p-6 flex flex-col" data-astro-cid-mv2qmi5q>
                 <h3 class="text-[28px] md:text-3xl text-center font-bebas" data-astro-cid-mv2qmi5q>
-                    Resumen de pago
+                    Riepilogo dei pagamenti
                 </h3>
                 <ul class="w-full
                 [&>li]:flex
@@ -83,9 +83,9 @@
                 gap-4 md:gap-8" data-astro-cid-mv2qmi5q>
                     <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Plan:</span><span
                             data-astro-cid-mv2qmi5q><?php echo $plan; ?></span></li>
-                    <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Pago de plan:</span><span
+                    <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Pagamento del piano:</span><span
                             data-astro-cid-mv2qmi5q>€<?php echo $price; ?></span></li>
-                    <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Total a pagar:</span><span
+                    <li data-astro-cid-mv2qmi5q><span data-astro-cid-mv2qmi5q>Totale da pagare:</span><span
                             data-astro-cid-mv2qmi5q>€<?php echo $price; ?></span></li>
                 </ul>
                 <div class="text-[10px] md:text-sm mt-auto" data-astro-cid-mv2qmi5q>
@@ -93,24 +93,23 @@
                         <input maxlength="25" class="mt-2" type="checkbox" required name="" id=""
                             data-astro-cid-mv2qmi5q>
                         <p class="" data-astro-cid-mv2qmi5q>
-                            Acepto las políticas de privacidad para toma de datos personales detalladas en los
+                            Accetto le politiche sulla privacy per la raccolta dei dati personali dettagliate nell'
                             <a class="text-primary font-bold text-xs" href="/#" data-astro-cid-mv2qmi5q>T&C</a>
                         </p>
                     </label>
                     <label class="flex gap-2 md:gap-4" data-astro-cid-mv2qmi5q>
                         <input maxlength="25" type="checkbox" required name="" id="" data-astro-cid-mv2qmi5q>
                         <p class="" data-astro-cid-mv2qmi5q>
-                            Acepto los términos y condiciones
+                            Accetto i termini e le condizioni
                             <a class="text-primary font-bold text-xs" href="/#" data-astro-cid-mv2qmi5q>T&C</a>
                         </p>
                     </label>
                 </div>
             </div>
 
-            <button type="submit"
-                class="w-full col-span-4 mt-8 bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap"
+            <button type="submit" class="w-full mt-8 bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap"
                 data-astro-cid-mv2qmi5q>
-                Completar pago
+                Pagamento completo
             </button>
 
             <div id="card-errors" class="col-span-4 text-xl text-red-500"></div>
