@@ -13,35 +13,33 @@
         rel="stylesheet">
     <title>home page</title>
     <meta name="description" content="Astro description">
-    <link rel="stylesheet" href="/_astro/article.DOc-4UcP.css">
     <style>
         .dragable[data-astro-cid-mv2qmi5q] {
             -ms-overflow-style: none;
-            scrollbar-width: none
+            scrollbar-width: none;
         }
 
         .dragable[data-astro-cid-mv2qmi5q]::-webkit-scrollbar {
-            display: none
+            display: none;
         }
     </style>
+    <link rel="stylesheet" href="/_astro/article.DOc-4UcP.css">
     <script type="module" src="/_astro/hoisted.De2duPkC.js"></script>
-        <!-- Custom -->
-        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script src="https://js.stripe.com/v3/"></script>
-        <script src="../panel/assets/js/stripe.js"></script>
-
+    <!-- Custom -->
+    <script defer src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script defer src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="bg-gray-800 text-white font-urb min-w-[100vw]">
-<?php
+<body class="bg-gray-800 text-white font-urb w-full">
+    <?php
     $page_name = "Payment";
     include '../panel/vistas/web/headerViews.php';
     include '../panel/utils/auth.php';
-    
+
     $plan = isset($_GET['plan']) ? $_GET['plan'] : 'Silver';
     $price = isset($_GET['price']) ? $_GET['price'] : '24.90';
-    
-?>
+
+    ?>
     <section class="container py-16 px-[5%]" data-astro-cid-mv2qmi5q>
         <div class="relative py-16" data-astro-cid-mv2qmi5q>
             <div class="absolute inset-x-0 flex justify-center -top-5" data-astro-cid-mv2qmi5q>
@@ -55,22 +53,11 @@
                     adipiscing elit. Etiam eu turpis molestie ipsum dolor sit amet, consectetur</span>
             </div>
         </div>
-        <form action="../panel/controladores/server.php" method="POST" id="payment-form" data-astro-cid-mv2qmi5q>
-            <div class="flex flex-wrap gap-6 md:gap-8 justify-between items-stretch" data-astro-cid-mv2qmi5q>
-                <!-- stripe elements -->
-                <div class="form-row">
-                <label for="card-element">Tarjeta de Crédito o Débito</label>
-                <div id="card-element">
-                    <!-- Stripe Elements se montará aquí -->
-                    <input type="hidden" name="plan" value="<?php echo $plan; ?>">
-                    <input type="hidden" name="price" value="<?php echo $price; ?>">
-                </div>
-                <!-- Se mostrarán los errores del pago aquí -->
-                <div id="card-errors" role="alert"></div>
-                </div>
-                <!-- resumen -->
-                <div class="" data-astro-cid-mv2qmi5q></div>
-                <div class="rounded-2xl bg-gray-400 p-6 md:w-1/3 flex flex-col" data-astro-cid-mv2qmi5q>
+    
+        <form action="../panel/controladores/server.php" method="POST" id="payment-form" data-astro-cid-mv2qmi5q class="grid grid-cols-4 gap-4">
+            <div class="col-span-4" id='payment-element'></div>
+
+            <div class="col-span-4 rounded-2xl bg-gray-400 p-6 flex flex-col" data-astro-cid-mv2qmi5q>
                 <h3 class="text-[28px] md:text-3xl text-center font-bebas" data-astro-cid-mv2qmi5q>
                     Resumen de pago
                 </h3>
@@ -101,63 +88,22 @@
                     </label>
                 </div>
             </div>
-<!-- resumen -->
-            </div><button type="submit" class="w-full mt-8 bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap"
-                data-astro-cid-mv2qmi5q>Completar pago</button>
-                
+
+            <button type="submit" class="w-full col-span-4 mt-8 bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap" data-astro-cid-mv2qmi5q>
+                Completar pago
+            </button>
+
+            <div id="payment-errors"></div>
         </form>
     </section>
-<?php
+
+    <script src="https://js.stripe.com/v3/"></script>
+    <script type="module" src='../panel//assets/js/stripe.js'></script>
+
+    <?php
     include '../panel/vistas/web/footer.php';
     include '../panel/utils/alertas.php';
-?>
+    ?>
 </body>
-<script>
-    var stripe = Stripe('pk_test_51OKAV9FFmlNWqBB1SQbN3ZfB5u6mcTjy036Fi0bvWqwhmNENA1Xody3htmIoX2YZtDyQec1HyRLibNwuBli4hcCl008rTNRuk6');
-    var elements = stripe.elements();
-    
-    // Crea un elemento de tarjeta y lo monta en el div 'card-element'
-    var card = elements.create('card');
-    card.mount('#card-element');
 
-    // Maneja los errores del campo de la tarjeta
-    card.on('change', function(event) {
-      var displayError = document.getElementById('card-errors');
-      if (event.error) {
-        displayError.textContent = event.error.message;
-      } else {
-        displayError.textContent = '';
-      }
-    });
-
-    // Maneja la presentación del formulario
-    var form = document.getElementById('payment-form');
-    form.addEventListener('submit', function(event) {
-      event.preventDefault();
-
-      stripe.createToken(card).then(function(result) {
-        if (result.error) {
-          // Muestra los errores en el formulario
-          var errorElement = document.getElementById('card-errors');
-          errorElement.textContent = result.error.message;
-        } else {
-          // Envia el token al servidor
-          stripeTokenHandler(result.token);
-        }
-      });
-    });
-
-    // Inserta el token de Stripe en un campo oculto y envía el formulario
-    function stripeTokenHandler(token) {
-      var form = document.getElementById('payment-form');
-      var hiddenInput = document.createElement('input');
-      hiddenInput.setAttribute('type', 'hidden');
-      hiddenInput.setAttribute('name', 'stripeToken');
-      hiddenInput.setAttribute('value', token.id);
-      form.appendChild(hiddenInput);
-
-      // Envia el formulario
-      form.submit();
-    }
-</script>
 </html>
