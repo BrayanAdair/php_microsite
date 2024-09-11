@@ -9,7 +9,7 @@
           
             <ul class="navbar-nav navbar-nav-right">
               <li class="nav-item dropdown d-none d-lg-block">
-                <a class="nav-link btn btn-success create-new-button"  aria-expanded="false" href="/profile">Ir a entrenamiento</a>
+                <a class="nav-link btn btn-success create-new-button"  aria-expanded="false" href="/profile">Vai alla formazione</a>
             
               </li>
              
@@ -34,7 +34,7 @@
                       </div>
                     </div>
                     <div class="preview-item-content">
-                      <p class="preview-subject mb-1">Configuraciones</p>
+                      <p class="preview-subject mb-1">Configurazioni</p>
                     </div>
                   </a>
                   <div class="dropdown-divider"></div>
@@ -45,12 +45,12 @@
                           </div>
                       </div>
                       <div class="preview-item-content">
-                          <p class="preview-subject mb-1">Cerrar Sesion</p>
+                          <p class="preview-subject mb-1">Chiusura della sessione</p>
                       </div>
                   </a>
 
                   <div class="dropdown-divider"></div>
-                  <p class="p-3 mb-0 text-center">¡Bienvenido!</p>
+                  <p class="p-3 mb-0 text-center">Benvenuti!</p>
                 </div>
               </li>
             </ul>

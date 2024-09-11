@@ -11,8 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>home page</title>
-    <meta name="description" content="Astro description">
+    <title>2Easy | Casa</title>
+    <meta name="Casa 2Easy" content="Astro description">
     <link rel="stylesheet" href="/_astro/article.DOc-4UcP.css">
     <style>
         div[data-astro-cid-o2fqafbn] {
@@ -33,21 +33,21 @@
     <script type="module" src="/_astro/hoisted.B1OmNESG.js"></script>
 </head>
 
-<body class="bg-gray-800 text-white font-urb min-w-[100vw]">
-<?php
+<body class="bg-gray-800 text-white font-urb w-full">
+    <?php
     $page_name = "Home";
     include 'panel/vistas/web/header.php';
-?>
+    ?>
     <section class="relative min-h-[50vh] md:min-h-[80vh] w-full text-center flex items-center justify-around">
         <div class="z-20 flex flex-col justify-around gap-7 items-center">
             <div>
                 <h1 class="text-[45px] lg:text-[62px] xl:text-[112px] font-bebas leading-none">
-                    Conviértete en <br class="md:hidden"> un <br class="hidden md:flex"> mejor atleta
+                    Diventare <br class="md:hidden"> un <br class="hidden md:flex"> atleta migliore
                 </h1>
                 <p class="md:text-[32px] xl:text-[36px]">
-                    Lleva tu juego al siguiente <br> nivel y alcanza tus objetivos.
+                    Portate il vostro gioco al livello successivo <br> livello e raggiungere i vostri obiettivi.
                 </p>
-            </div> <a href="/#planes" class="bg-primary p-2.5 rounded-lg md:text-3xl">Comenzar ahora</a>
+            </div> <a href="/#planes" class="bg-primary p-2.5 rounded-lg md:text-3xl">Iniziare ora</a>
         </div>
         <div class="absolute top-20 grid place-content-center">
             <div class="w-auto aspect-square mix-blend-overlay bg-white rounded-full blur-2xl md:blur-3xl h-32 md:h-96">
@@ -62,10 +62,10 @@
     <section class="bg-white min-h-screen py-32 md:pt-44 text-black">
         <div class="container text-center flex flex-col md:gap-4 w-auto items-center px-[10%]">
             <h2 class="text-primary font-black text-[28px] md:text-7xl text-nowrap w-full">
-                Pasos de coaching
+                Fasi di coaching
             </h2>
             <h4 class="md:text-4xl w-[60%]">
-            Il tuo allenamento è pronto, inizia con i tuoi esercizi personalizzati dal nostro team.
+                Il vostro allenamento è pronto, iniziate con esercizi personalizzati dal nostro team.
             </h4>
         </div>
         <div class="sliderDragable flex w-full overflow-y-scroll overflow-scroll sm:overflow-auto"
@@ -84,10 +84,10 @@
                             <div style="background-image: url('/_astro/message-t.BIROElG0.svg');"
                                 class="bg-center bg-no-repeat bg-origin-border bg-cover cursor-auto  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-end aspect-[100/80]"
                                 data-astro-cid-o2fqafbn>
-                                <h5 class="font-bold" data-astro-cid-o2fqafbn>Creación de Rutina Personalizada</h5>
+                                <h5 class="font-bold" data-astro-cid-o2fqafbn>Creazione di routine personalizzate</h5>
                                 <p data-astro-cid-o2fqafbn>
-                                    Registra membresías, beneficiarios, comercios y beneficios con
-                                    vigencias y normas.
+                                    Registra le adesioni, i beneficiari, le imprese e le prestazioni con
+                                    e regole.
                                 </p>
                             </div>
                         </div>
@@ -102,10 +102,10 @@
                             <div style="background-image: url('/_astro/message.bXpmNGJg.svg');"
                                 class="bg-center bg-no-repeat bg-origin-border bg-cover cursor-auto  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-start aspect-[93/80]"
                                 data-astro-cid-o2fqafbn>
-                                <h5 class="font-bold" data-astro-cid-o2fqafbn>Creación de Rutina Personalizada</h5>
+                                <h5 class="font-bold" data-astro-cid-o2fqafbn>Creazione di routine personalizzate</h5>
                                 <p data-astro-cid-o2fqafbn>
-                                    Registra membresías, beneficiarios, comercios y beneficios con
-                                    vigencias y normas.
+                                    Registra le adesioni, i beneficiari, le imprese e le prestazioni con
+                                    e regole.
                                 </p>
                             </div>
                         </div>
@@ -117,13 +117,13 @@
                                 <h5 class="text-white font-bold text-[45px] md:text-[67px]" data-astro-cid-o2fqafbn> 3
                                 </h5>
                             </div>
-                            <div style="background-image: url('/_astro/message-t.BIROElG0.svg');"
-                                class="bg-center bg-no-repeat bg-origin-border bg-cover cursor-auto  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-end aspect-[100/80]"
+                            <div style="background-image: url('/_astro/message.bXpmNGJg.svg');"
+                                class="bg-center bg-no-repeat bg-origin-border bg-cover cursor-auto  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-start aspect-[93/80]"
                                 data-astro-cid-o2fqafbn>
-                                <h5 class="font-bold" data-astro-cid-o2fqafbn>Creación de Rutina Personalizada</h5>
+                                <h5 class="font-bold" data-astro-cid-o2fqafbn>Creazione di routine personalizzate</h5>
                                 <p data-astro-cid-o2fqafbn>
-                                    Registra membresías, beneficiarios, comercios y beneficios con
-                                    vigencias y normas.
+                                    Registra le adesioni, i beneficiari, le imprese e le prestazioni con
+                                    e regole.
                                 </p>
                             </div>
                         </div>
@@ -138,10 +138,10 @@
                             <div style="background-image: url('/_astro/message.bXpmNGJg.svg');"
                                 class="bg-center bg-no-repeat bg-origin-border bg-cover cursor-auto  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-start aspect-[93/80]"
                                 data-astro-cid-o2fqafbn>
-                                <h5 class="font-bold" data-astro-cid-o2fqafbn>Creación de Rutina Personalizada</h5>
+                                <h5 class="font-bold" data-astro-cid-o2fqafbn>Creazione di routine personalizzate</h5>
                                 <p data-astro-cid-o2fqafbn>
-                                    Registra membresías, beneficiarios, comercios y beneficios con
-                                    vigencias y normas.
+                                    Registra le adesioni, i beneficiari, le imprese e le prestazioni con
+                                    e regole.
                                 </p>
                             </div>
                         </div>
@@ -153,13 +153,13 @@
                                 <h5 class="text-white font-bold text-[45px] md:text-[67px]" data-astro-cid-o2fqafbn> 5
                                 </h5>
                             </div>
-                            <div style="background-image: url('/_astro/message-t.BIROElG0.svg');"
-                                class="bg-center bg-no-repeat bg-origin-border bg-cover cursor-auto  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-end aspect-[100/80]"
+                            <div style="background-image: url('/_astro/message.bXpmNGJg.svg');"
+                                class="bg-center bg-no-repeat bg-origin-border bg-cover cursor-auto  overflow-visible max-w-72 p-4  text-xl flex flex-col relative z-20 justify-start aspect-[93/80]"
                                 data-astro-cid-o2fqafbn>
-                                <h5 class="font-bold" data-astro-cid-o2fqafbn>Creación de Rutina Personalizada</h5>
+                                <h5 class="font-bold" data-astro-cid-o2fqafbn>Creazione di routine personalizzate</h5>
                                 <p data-astro-cid-o2fqafbn>
-                                    Registra membresías, beneficiarios, comercios y beneficios con
-                                    vigencias y normas.
+                                    Registra le adesioni, i beneficiari, le imprese e le prestazioni con
+                                    e regole.
                                 </p>
                             </div>
                         </div>
@@ -173,66 +173,68 @@
                 <div class="flex flex-col items-center"> <span class="
                             text-[62px] sm:text-[90px] md:text-[120px] lg:text-[180px] xl:text-[200px]
                              leading-none font-black"> 20 </span>
-                    <p class="text-[9px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl"> Estudiantes exitosos </p>
+                    <p class="text-[9px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl"> Studenti di successo </p>
                 </div>
                 <div class="flex flex-col items-center"> <span class="
                             text-[62px] sm:text-[90px] md:text-[120px] lg:text-[180px] xl:text-[200px]
                              leading-none font-black"> 21 </span>
-                    <p class="text-[9px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl"> Años de experiencia </p>
+                    <p class="text-[9px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl"> Anni di esperienza </p>
                 </div>
                 <div class="flex flex-col items-center"> <span class="
                             text-[62px] sm:text-[90px] md:text-[120px] lg:text-[180px] xl:text-[200px]
                              leading-none font-black"> 30 </span>
-                    <p class="text-[9px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl"> Usuarios totales </p>
+                    <p class="text-[9px] sm:text-base md:text-xl lg:text-2xl xl:text-3xl"> Utenti totali </p>
                 </div>
             </div>
         </div>
         <div class="flex flex-col xl:flex-row container px-[10%] gap-9 lg:gap-[3.5rem]">
             <div class="flex flex-col items-center xl:items-start justify-center gap-5 flex-1">
                 <h2 class="font-bebas text-6xl text-center font-medium leading-none lg:text-[6rem]">
-                    Que ofrecemos?
+                    Cosa offriamo?
                 </h2>
                 <p class="text-xs lg:text-2xl font-medium">
-                    Descubre cómo nuestros servicios personalizados pueden
-                    ayudarte a alcanzar tus metas futbolísticas.
+                    Scoprite come i nostri servizi personalizzati possono aiutarvi a
+                    aiutarvi a raggiungere i vostri obiettivi calcistici.
                 </p> <button
-                    class="bg-primary p-[5px] px-2.5 lg:p-2.5 lg:px-4 rounded-lg text-white lg:text-3xl">Comenzar
-                    ahora</button>
+                    class="bg-primary p-[5px] px-2.5 lg:p-2.5 lg:px-4 rounded-lg text-white lg:text-3xl">Iniziare
+                    ora</button>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6 flex-1">
                 <div
                     class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center">
-                    <h4 class="text-2xl font-bold"> Explicaciones personalizadas </h4>
-                    <p> Recibe explicaciones detalladas y personalizadas adaptadas a tus necesidades específicas. </p>
+                    <h4 class="text-2xl font-bold"> Spiegazioni personalizzate </h4>.
+                    <p>Ricevete spiegazioni dettagliate e personalizzate in base alle vostre esigenze specifiche. </p>
                 </div>
                 <div
                     class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center">
-                    <h4 class="text-2xl font-bold"> Videos de coaching personalilizados </h4>
-                    <p> Accede a videos de coaching hechos a medida para mejorar tus habilidades en el fútbol. </p>
+                    <h4 class="text-2xl font-bold"> Video didattici personalizzati </h4>.
+                    <p>Accedete a video didattici su misura per migliorare le vostre abilità calcistiche. </p>
                 </div>
                 <div
                     class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center">
-                    <h4 class="text-2xl font-bold"> Atención al instante </h4>
-                    <p> Obtén respuestas rápidas y soporte continuo de nuestros entrenadores profesionales. </p>
+                    <h4 class="text-2xl font-bold"> Attenzione immediata </h4>.
+                    <p>Ottieni risposte rapide e supporto continuo dai nostri formatori professionisti. </p>
                 </div>
                 <div
                     class="rounded-2xl border border-white-300 p-4 flex flex-col items-center justify-center gap-3 text-center">
-                    <h4 class="text-2xl font-bold"> Renovación de coaching </h4>
-                    <p> Actualiza y ajusta tus rutinas con la ayuda de nuestros expertos, asegurando un progreso
-                        constante. </p>
+                    <h4 class="text-2xl font-bold"> Rinnovo del coaching </h4>.
+                    <p>Aggiornate e modificate le vostre routine con l'aiuto dei nostri esperti, assicurandovi progressi
+                        costanti.
+                        progressi. </p>
                 </div>
             </div>
         </div>
     </section>
     <section id="planes" class="py-16 md:py-32">
         <div class="container relative pb-16 flex justify-center flex-col items-center">
-            <h2 class="font-bebas text-5xl md:text-8xl">Planes y precios</h2> <span class="md:text-2xl">Elige el
-                perfecto para ti</span>
-            <div class="absolute -top-44 grid place-content-center">
-                <div
-                    class="w-auto aspect-square mix-blend-overlay bg-white rounded-full blur-2xl md:blur-3xl h-32 md:h-96">
+            <h2 class="font-bebas text-5xl md:text-8xl">Piani e prezzi</h2> <span class=“md:text-2xl”>Scegliete quello
+                giusto per voi</h2> <span class=“md:text-2xl”>Scegliete quello
+                    perfetto per voi</span>
+                <div class="absolute -top-44 grid place-content-center">
+                    <div
+                        class="w-auto aspect-square mix-blend-overlay bg-white rounded-full blur-2xl md:blur-3xl h-32 md:h-96">
+                    </div>
                 </div>
-            </div>
         </div>
         <div class="container px-[10%]">
             <div class="flex flex-col items-center lg:items-stretch lg:flex-row gap-12 justify-center">
@@ -253,30 +255,31 @@
                                                 transform="translate(0.946289 0.716919)"></rect>
                                         </clipPath>
                                     </defs>
-                                </svg> </h4>
+                                </svg>
+                            </h4>
                             <p class="mb-4">
-                                Obsesionada con todo lo relacionado con el entrenamiento
+                                Ossessionato da tutto ciò che ha a che fare con l'allenamento.
                             </p>
                             <div class="pt-4 flex flex-col gap-2 w-full">
                                 <h5 class="font-bebas text-5xl md:text-7xl leading-[0.5]">
-                                    € 24,90 </h5> <span>Por cada mes</span>
+                                    € 24,90 </h5> <span>Per ogni mese</span>
                             </div>
                             <hr class="border border-white-200 w-full">
                             <div class="flex flex-col text-left gap-2 text-xs md:text-xl mb-auto">
-                                <h5>incluye:</h5>
+                                <h5>incluso</h5>
                                 <ul class="ml-5  flex flex-col gap-2">
-                                    <li>Programación de entrenamiento</li>
+                                    <li>Programmazione della formazione</li>
                                 </ul>
                             </div>
                         </div> <a href="/pricing"
-                            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Adquirir
-                            membresia</a>
+                            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Acquisire
+                            adesione</a>
                     </div>
                 </div>
                 <div class="relative z-10 flex flex-col max-w-md min-h-full">
                     <div class="absolute flex -top-6 inset-x-0 z-10 "> <span
                             class="flex mx-auto bg-primary pt-0.5 pb-[14px] px-[22px] rounded-lg text-white">
-                            Más popular 🔥
+                            I più popolari 🔥
                         </span> </div>
                     <div class="relative z-20 h-full flex flex-col gap-14 bg-gray-400 p-8 rounded-3xl text-center">
                         <div class="flex flex-col items-center gap-4">
@@ -288,23 +291,23 @@
                                         fill="#F1B32B"></path>
                                 </svg> </h4>
                             <p class="mb-4">
-                                Obsesionada con todo lo relacionado con el entrenamiento
+                                Ossessionato da tutto ciò che ha a che fare con l'allenamento.
                             </p>
                             <div class="pt-4 flex flex-col gap-2 w-full">
                                 <h5 class="font-bebas text-5xl md:text-7xl leading-[0.5]">
-                                    € 29,90 </h5> <span>Por cada mes</span>
+                                    € 29,90 </h5> <span>Per ogni mese</span>
                             </div>
                             <hr class="border border-white-200 w-full">
                             <div class="flex flex-col text-left gap-2 text-xs md:text-xl mb-auto">
-                                <h5>incluye:</h5>
+                                <h5>incluso:</h5>
                                 <ul class="ml-5  flex flex-col gap-2">
-                                    <li>Programación de entrenamiento</li>
-                                    <li>Video explicativo de ejercicios</li>
+                                    <li>Programmazione della formazione</li>
+                                    <li>Video esplicativo degli esercizi</li>
                                 </ul>
                             </div>
                         </div> <a href="/pricing"
-                            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Adquirir
-                            membresia</a>
+                            class="bg-primary p-[14px] px-[22px] rounded-lg text-white mx-[10%] mt-auto">Acquisire
+                            adesione</a>
                     </div>
                 </div>
             </div>
@@ -313,18 +316,20 @@
     <section class="py-16 md:py-32 px-[5%] container">
         <div class="container pb-10 flex justify-center flex-col items-center text-center">
             <h2 class="font-bebas text-3xl md:text-8xl">
-                TE DEMOSTRAMOS COMO SER EL MEJOR
-            </h2> <span class="text-[10px] md:text-xl">Comparte acceso y facilidad de uso mediante canales de
-                comunicación empresariales.</span>
+                VI MOSTRIAMO COME ESSERE I MIGLIORI
+            </h2> <span class="text-[10px] md:text-xl">Condividere l'accesso e la facilità d'uso attraverso la
+                comunicazione aziendale
+                canali di comunicazione.</span>
         </div>
         <div class="aspect-video">
             <!-- <video class="rounded-xl w-full h-auto" src={"https://www.youtube.com/watch?v=eaRQF-7hhmo&pp=ygUOZ3ltIG1vdGl2YXRpb24%3D"} > -->
             <iframe class="rounded-xl" width="100%" height="100%" src="https://www.youtube.com/embed/eaRQF-7hhmo">
-            </iframe> </div>
+            </iframe>
+        </div>
     </section>
-<?php
+    <?php
     include 'panel/vistas/web/footer.php';
-?>
+    ?>
 </body>
 
 </html>

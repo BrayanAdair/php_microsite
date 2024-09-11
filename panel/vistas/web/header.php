@@ -24,7 +24,7 @@ if (isset($_SESSION['user_id'])) {
     <div class="flex gap-2 md:gap-4 lg:gap-8">
     <a href="/profile"
                class="flex-shrink-0 py-2 px-1 md:px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md">
-                <p>Entrenar</p>
+                <p>Treno</p>
             </a>
         <a href="<?php echo $_SERVER['PHP_SELF']; ?>"
            class="flex-shrink-0 py-2 px-1 md:px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md">
@@ -33,7 +33,7 @@ if (isset($_SESSION['user_id'])) {
         <?php if (isset($_SESSION['user_id'])): ?>
             <a href="../panel/utils/logout.php"
                class="flex-shrink-0 py-2 px-1 md:px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md">
-                <p>Cerrar sesión</p>
+                <p>Disconnettersi</p>
             </a>
             <a href="/set-profile" class="relative place-content-center">
                 <?php if ($foto_perfil): ?>
@@ -47,7 +47,7 @@ if (isset($_SESSION['user_id'])) {
         <?php else: ?>
             <a href="/auth"
                class="flex-shrink-0 py-2 px-1 md:px-3 cursor-pointer border border-transparent hover:border-primary active:border-primary rounded-md">
-                <p>Iniciar sesión</p>
+                <p>Accedi</p>
             </a>
         <?php endif; ?>
         <custom-lang class="relative place-content-center">

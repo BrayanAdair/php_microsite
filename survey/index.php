@@ -11,7 +11,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <title>home page</title>
+    <title>2Easy | Sondaggio</title>
     <meta name="description" content="Astro description">
     <link rel="stylesheet" href="/_astro/article.DOc-4UcP.css">
     <style>
@@ -80,12 +80,12 @@
 </head>
 
 <body class="bg-gray-800 text-white font-urb min-w-[100vw]">
-<?php
+    <?php
     include '../panel/utils/authSurvey.php';
     $page_name = "Survey";
     include '../panel/vistas/web/headerViews.php';
-        
-?>
+
+    ?>
     <section class="container py-16 px-[5%]">
         <div class="relative py-16">
             <div class="absolute inset-x-0 flex justify-center -top-5">
@@ -94,192 +94,195 @@
                 </div>
             </div>
             <div class="container text-center">
-                <h2 class="font-bebas text-4xl  leading-none  text-[33px] md:text-[100px]  ">Cuestionario de Evaluación
-                    del
-                    Nivel de Habilidad en Sala de Pesas</h2> <span class="text-xl leading-none  md:text-[40px] ">Rellena
-                    este cuestionario para poder personalizar con más eficiencia tus ejercicios y lecciones que
-                    verás.</span>
+                <h2 class="font-bebas text-4xl  leading-none  text-[33px] md:text-[100px]  ">Questionario di valutazione
+                    da
+                    Questionario di valutazione del livello di abilità in sala pesi</h2> <span
+                    class="text-xl leading-none  md:text-[40px] ">Compilare
+                    questo questionario per poter personalizzare in modo più efficace gli esercizi e le lezioni che
+                    vedrete.
+                    vedrete.</span>
             </div>
         </div>
-        <form action="../panel/controladores/postSurvey.php" method="POST" class="flex flex-col gap-8 md:gap-12 leading-none md:px-[10%]">
+        <form action="../panel/controladores/postSurvey.php" method="POST"
+            class="flex flex-col gap-8 md:gap-12 leading-none md:px-[10%]">
             <h4 class="mt-16  text-[22px] md:text-[50px] text-center font-bebas">
-                Experiencia general
+                Esperienza generale
             </h4> <!-- select -->
             <fieldset class="" data-astro-cid-6wvssxk3>
-                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>¿Cuánto tiempo llevas entrenando
-                    regularmente en el gimnasio?</legend>
+                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>Da quanto tempo si allena regolarmente
+                    regolarmente in palestra?</legend>
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-11" data-astro-cid-6wvssxk3> <label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Menos de 6 meses</span> <input
-                            maxlength="25" class="invisible h-0 w-0" value="Menos de 6 meses" type="radio" name="q1resp1"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Meno di 6 mesi</span> <input
+                            maxlength="25" class="invisible h-0 w-0" value="Meno di 6 mesi" type="radio" name="q1resp1"
                             data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>6meses - 2años</span> <input
-                            maxlength="25" class="invisible h-0 w-0" value="6meses - 2años" type="radio" name="q1resp2"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>6 Mesi - 2 Anni</span> <input
+                            maxlength="25" class="invisible h-0 w-0" value="6 Mesi - 2 Anni" type="radio" name="q1resp2"
                             data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Más de 2 años</span> <input
-                            maxlength="25" class="invisible h-0 w-0" value="Más de 2 años" type="radio" name="q1resp3"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Più di 2 anni</span> <input
+                            maxlength="25" class="invisible h-0 w-0" value="Più di 2 anni" type="radio" name="q1resp3"
                             data-astro-cid-6wvssxk3> </label> </div>
             </fieldset>
 
             <fieldset class="" data-astro-cid-6wvssxk3>
-                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>¿Con qué frecuencia te entrenas en el
-                    gimnasio cada semana?</legend>
+                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>Quanto spesso si allena in palestra ogni
+                    settimana?
+                    palestra ogni settimana?</legend>
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-11" data-astro-cid-6wvssxk3> <label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>1-2 veces</span> <input maxlength="25"
-                            class="invisible h-0 w-0" value="1-2 veces" type="radio" name="q2resp1"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>1-2 Tempi</span> <input maxlength="25"
+                            class="invisible h-0 w-0" value="1-2 Tempi" type="radio" name="q2resp1"
                             data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>6meses - 2años</span> <input
-                            maxlength="25" class="invisible h-0 w-0" value="6meses - 2años" type="radio" name="q2resp2"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>6 Mesi - 2 Anni</span> <input
+                            maxlength="25" class="invisible h-0 w-0" value="6 Mesi - 2 Anni" type="radio" name="q2resp2"
                             data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Más de 2 años</span> <input
-                            maxlength="25" class="invisible h-0 w-0" value="Más de 2 años" type="radio" name="q2resp3"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Più di 2 anni</span> <input
+                            maxlength="25" class="invisible h-0 w-0" value="Più di 2 anni" type="radio" name="q2resp3"
                             data-astro-cid-6wvssxk3> </label> </div>
             </fieldset>
 
             <fieldset class="" data-astro-cid-6wvssxk3>
-                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>¿Cuál es tu nivel de confianza al
-                    ejecutar correctamente los siguientes ejercicios? (Sentadilla con barra, Peso muerto, Press de banca
-                    con barra, Press militar con barra)</legend>
+                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>Qual è il suo livello di fiducia
+                    nell'eseguire correttamente
+                    i seguenti esercizi (Squat con bilanciere, Deadlift, Bench Press con bilanciere, Military Press con
+                    bilanciere)?</legend>
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-11" data-astro-cid-6wvssxk3> <label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Nunca los he intentado / necesito
-                            asistencia constante</span> <input maxlength="25" class="invisible h-0 w-0"
-                            value="Nunca los he intentado / necesito asistencia constante" type="radio" name="q3resp1"
-                            data-astro-cid-6wvssxk3> </label><label
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Non li ho mai provati / ho bisogno di
+                            assistenza costante</span> <input maxlength="25" class="invisible h-0 w-0" value="Non li ho mai provati / ho bisogno di
+                        assistenza costante" type="radio" name="q3resp1" data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Estoy familiarizado, pero necesito
-                            supervisión ocasional</span> <input maxlength="25" class="invisible h-0 w-0"
-                            value="Estoy familiarizado, pero necesito supervisión ocasional" type="radio" name="q3resp2"
-                            data-astro-cid-6wvssxk3> </label><label
-                        class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Estoy muy confiado y los realizo
-                            regularmente sin supervisión</span> <input maxlength="25" class="invisible h-0 w-0"
-                            value="Estoy muy confiado y los realizo regularmente sin supervisión" type="radio"
-                            name="q3resp3" data-astro-cid-6wvssxk3> </label> </div>
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Ho dimestichezza, ma ho bisogno di
+                            di una supervisione occasionale</span> <input maxlength="25" class="invisible h-0 w-0"
+                            value="Ho dimestichezza, ma ho bisogno di
+                        di una supervisione occasionale" type="radio" name="q3resp2" data-astro-cid-6wvssxk3>
+                    </label><label class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sono molto sicuro di me e li eseguo
+                            regolarmente senza supervisione</span> <input maxlength="25" class="invisible h-0 w-0"
+                            value="Sono molto sicuro di me e li eseguo
+                        regolarmente senza supervisione" type="radio" name="q3resp3" data-astro-cid-6wvssxk3> </label>
+                </div>
             </fieldset>
 
             <fieldset class="" data-astro-cid-6wvssxk3>
-                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>¿Has participado alguna vez en programas
-                    de entrenamiento estructurados (ej. programas de fuerza, culturismo, powerlifting)?</legend>
+                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>Ha mai partecipato a programmi di allenamento strutturati
+                    programmi di allenamento strutturati (ad esempio programmi di forza, bodybuilding, powerlifting)?
+                </legend>
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-11" data-astro-cid-6wvssxk3> <label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>No, nunca</span> <input maxlength="25"
-                            class="invisible h-0 w-0" value="No, nunca" type="radio" name="q4resp1"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>No, mai</span> <input maxlength="25"
+                            class="invisible h-0 w-0" value="No, mai" type="radio" name="q4resp1"
                             data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sí, pero solo por periodos cortos</span>
-                        <input maxlength="25" class="invisible h-0 w-0" value="Sí, pero solo por periodos cortos"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sì, ma solo per brevi periodi</span>
+                        <input maxlength="25" class="invisible h-0 w-0" value="Sì, ma solo per brevi periodi"
                             type="radio" name="q4resp2" data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sí, por un periodo prolongado</span>
-                        <input maxlength="25" class="invisible h-0 w-0" value="Sí, por un periodo prolongado"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sì, per un periodo prolungato</span>
+                        <input maxlength="25" class="invisible h-0 w-0" value="Sì, per un periodo prolungato"
                             type="radio" name="q4resp3" data-astro-cid-6wvssxk3> </label> </div>
             </fieldset>
 
             <h4 class="mt-16  text-[22px] md:text-[50px] text-center font-bebas">
-                Conocimiento de la Programación de Entrenamiento
+                Conoscenza della programmazione della formazione
             </h4>
             <fieldset class="" data-astro-cid-6wvssxk3>
-                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>¿Eres capaz de crear y adaptar un
-                    programa de entrenamiento basado en tus objetivos?</legend>
+                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>Siete in grado di creare e adattare un programma di allenamento in base ai vostri obiettivi?</legend>
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-11" data-astro-cid-6wvssxk3> <label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>No, me baso en programas preestablecidos
-                            o en entrenadores</span> <input maxlength="25" class="invisible h-0 w-0"
-                            value="No, me baso en programas preestablecidos o en entrenadores" type="radio"
-                            name="q5resp1" data-astro-cid-6wvssxk3> </label><label
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>No, mi affido a programmi prestabiliti o formatori</span> <input maxlength="25" class="invisible h-0 w-0" value="No, mi affido a programmi prestabiliti
+                            o formatori" type="radio" name="q5resp1" data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sí, pero con habilidades limitadas para
-                            modificar y adaptar</span> <input maxlength="25" class="invisible h-0 w-0"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sì, ma con capacità limitate di modificare e adattare</span> <input maxlength="25" class="invisible h-0 w-0"
                             value="Sí, pero con habilidades limitadas para modificar y adaptar" type="radio"
                             name="q5resp2" data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sí, con un excelente entendimiento de las
-                            variables del entrenamiento (volumen, intensidad, frecuencia)</span> <input maxlength="25"
-                            class="invisible h-0 w-0"
-                            value="Sí, con un excelente entendimiento de las variables del entrenamiento (volumen, intensidad, frecuencia)"
-                            type="radio" name="q5resp3" data-astro-cid-6wvssxk3> </label> </div>
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sì, con un'eccellente comprensione delle variabili dell'allenamento (volume, intensità, frequenza).</span> <input maxlength="25"
+                            class="invisible h-0 w-0" value="Sì, con un'eccellente comprensione delle
+                        variabili dell'allenamento (volume, intensità, frequenza)." type="radio" name="q5resp3"
+                            data-astro-cid-6wvssxk3> </label> </div>
             </fieldset>
 
             <fieldset class="" data-astro-cid-6wvssxk3>
-                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3> ¿Conoces los principios de
-                    periodización y los aplicas en tus entrenamientos?</legend>
+                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3> Conoscete i principi della
+                    di periodizzazione e li applicate nel vostro allenamento?</legend>
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-11" data-astro-cid-6wvssxk3> <label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>No, no conozco estos conceptos</span>
-                        <input maxlength="25" class="invisible h-0 w-0" value="No, no conozco estos conceptos"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>No, non conosco questi concetti</span>
+                        <input maxlength="25" class="invisible h-0 w-0" value="No, non conosco questi concetti"
                             type="radio" name="q6resp1" data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sí, tengo un conocimiento básico y los
-                            aplico ocasionalmente</span> <input maxlength="25" class="invisible h-0 w-0"
-                            value="Sí, tengo un conocimiento básico y los aplico ocasionalmente" type="radio"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sì, ho una conoscenza di base e occasionalmente le applico</span> <input maxlength="25" class="invisible h-0 w-0"
+                            value="Sì, ho una conoscenza di base e occasionalmente le applico" type="radio"
                             name="q6resp2" data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sí, tengo un conocimiento profundo y los
-                            uso regularmente</span> <input maxlength="25" class="invisible h-0 w-0"
-                            value="Sí, tengo un conocimiento profundo y los uso regularmente" type="radio"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sì, ne ho una conoscenza approfondita e li uso regolarmente</span> <input maxlength="25" class="invisible h-0 w-0"
+                            value="Sì, ne ho una conoscenza approfondita e li uso regolarmente" type="radio"
                             name="q6resp3" data-astro-cid-6wvssxk3> </label> </div>
             </fieldset>
 
             <h4 class="mt-16  text-[22px] md:text-[50px] text-center font-bebas">
-                Conocimiento de Progresiones y Adaptación
+                Conoscenza delle progressioni e dell'adattamento
             </h4>
             <fieldset class="" data-astro-cid-6wvssxk3>
-                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>¿Cómo monitoreas tus progresos en el
-                    gimnasio?</legend>
+                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>Come controllate i vostri progressi in
+                    palestra?</legend>
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-11" data-astro-cid-6wvssxk3> <label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>No monitoreo los progresos</span> <input
-                            maxlength="25" class="invisible h-0 w-0" value="No monitoreo los progresos" type="radio"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Non monitorare i progressi</span> <input
+                            maxlength="25" class="invisible h-0 w-0" value="Non monitorare i progressi" type="radio"
                             name="q7resp1" data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Ocasionalmente reviso el peso levantado o
-                            el número de repeticiones</span> <input maxlength="25" class="invisible h-0 w-0"
-                            value="Ocasionalmente reviso el peso levantado o el número de repeticiones" type="radio"
-                            name="q7resp2" data-astro-cid-6wvssxk3> </label><label
-                        class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Llevo un diario de entrenamiento
-                            detallado y monitoreo constantemente los progresos</span> <input maxlength="25"
-                            class="invisible h-0 w-0"
-                            value="Llevo un diario de entrenamiento detallado y monitoreo constantemente los progresos"
-                            type="radio" name="q7resp3" data-astro-cid-6wvssxk3> </label> </div>
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Di tanto in tanto verifico il peso
+                            sollevato o il numero di ripetizioni.</span> <input maxlength="25" class="invisible h-0 w-0"
+                            value="Di tanto in tanto verifico il peso
+                            sollevato o il numero di ripetizioni." type="radio" name="q7resp2" data-astro-cid-6wvssxk3>
+                    </label><label class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Tengo un diario di allenamento
+                            dettagliato
+                            e monitoro costantemente i progressi</span> <input maxlength="25" class="invisible h-0 w-0"
+                            value="Tengo un diario di allenamento
+                            dettagliato
+                            e monitoro costantemente i progressi" type="radio" name="q7resp3" data-astro-cid-6wvssxk3>
+                    </label> </div>
             </fieldset>
 
             <fieldset class="" data-astro-cid-6wvssxk3>
-                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>¿Eres capaz de identificar y corregir
-                    por ti mismo posibles errores en tu técnica de ejecución de los ejercicios?</legend>
+                <legend class="text-center md:text-3xl" data-astro-cid-6wvssxk3>Siete in grado di identificare e
+                    correggere
+                    da soli eventuali errori nella tecnica di esercizio?</legend>
                 <div class="flex flex-col md:flex-row gap-2 md:gap-4 my-11" data-astro-cid-6wvssxk3> <label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>No, dependo completamente del feedback de
-                            un entrenador</span> <input maxlength="25" class="invisible h-0 w-0"
-                            value="No, dependo completamente del feedback de un entrenador" type="radio"
-                            name="q8resp1" data-astro-cid-6wvssxk3> </label><label
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>No, sono completamente dipendente dal
+                            feedback di
+                            un formatore</span> <input maxlength="25" class="invisible h-0 w-0" value="No, sono completamente dipendente dal
+                            feedback di
+                            un formatore" type="radio" name="q8resp1" data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sí, pero a veces necesito confirmación de
-                            un experto</span> <input maxlength="25" class="invisible h-0 w-0"
-                            value="Sí, pero a veces necesito confirmación de un experto" type="radio" name="q8resp2"
-                            data-astro-cid-6wvssxk3> </label><label
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sì, ma a volte ho bisogno della conferma
+                            di
+                            un esperto</span> <input maxlength="25" class="invisible h-0 w-0" value="Sì, ma a volte ho bisogno della conferma
+                            di
+                            un esperto" type="radio" name="q8resp2" data-astro-cid-6wvssxk3> </label><label
                         class="cursor-pointer py-5 md:py-10 w-full bg-gray-400 rounded-md hover:bg-gray-200"
-                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sí, soy consciente de mis errores y sé
-                            cómo corregirlos</span> <input maxlength="25" class="invisible h-0 w-0"
-                            value="Sí, soy consciente de mis errores y sé cómo corregirlos" type="radio"
-                            name="q8resp3" data-astro-cid-6wvssxk3> </label> </div>
+                        data-astro-cid-6wvssxk3> <span data-astro-cid-6wvssxk3>Sì, sono consapevole dei miei errori e so
+                            come correggerli.</span> <input maxlength="25" class="invisible h-0 w-0" value="Sì, sono consapevole dei miei errori e so
+                            come correggerli." type="radio" name="q8resp3" data-astro-cid-6wvssxk3> </label> </div>
             </fieldset>
-             <button type="submit" data-modal-target="static-modal" data-modal-toggle="static-modal"
+            <button type="submit" data-modal-target="static-modal" data-modal-toggle="static-modal"
                 class="mt-8 bg-primary p-2.5 px-6 rounded-lg md:text-3xl text-nowrap mx-auto">
-                Enviar formulario
+                Inviare il modulo
             </button>
         </form>
     </section>
-<?php
+    <?php
     include '../panel/vistas/web/footer.php';
     include '../panel/utils/alertas.php';
-?>
+    ?>
 </body>
 
 </html>
